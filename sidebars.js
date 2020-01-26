@@ -8,5 +8,6 @@
 module.exports = {
   someSidebar: {
     JavaScript: ['set-vs-map'],
+    React: ['react-testing']
   },
 };
