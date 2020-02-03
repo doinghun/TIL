@@ -19,11 +19,11 @@ Jest Syntax
 
         expect(div.innerHTML).toContain('Comment Box')
 
-![Testing](assets/react-testing.png)
+![Testing](/TIL/img/react-testing.png)
 
 Enzyme
 
-![Testing 1](assets/react-testing-1.png)
+![Testing 1](/TIL/img/react-testing-1.png)
 
 - Shallow (shallow)
 - Full DOM (mount)
