@@ -3,7 +3,7 @@ id: oop-1
 title: Object Oriented Programming in JavaScript [Part 1]
 ---
 
-## What are Objects
+### What are Objects
 
 - Objects in JavaScript are used to model real-world objects, giving them properties and behavior just like their real-world counterparts. (Eg. Object - Cars, Property: Wheel)
 - These qualities, or properties, define what makes up an object. 
@@ -58,8 +58,40 @@ function Dog() {
   this.color = "white";
   this.numLegs = 4;
 }
-// Add your code below this line
 
 let maltese = new Dog()
 ```
 
+#### Extend Constructors to Receive Arguments
+```javascript
+function Dog(name, color) {
+    this.name = name;
+    this.color = color;
+    this.numLegs = 4;
+}
+let maltese = new Dog("Koong", "White")
+```
+
+#### `instance of`
+Anytime a constructor function creates a new object, that object is said to be an instance of its constructor. 
+
+```javascript
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+let myHouse = new House(3);
+myHouse instanceof House // true
+```
+
+#### ownProps
+```javascript
+let ownProps = [];
+// Add your code below this line
+for(let property in myHouse) {
+  if(myHouse.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+}
+console.log(ownProps) // [ 'numBedrooms' ]
+```
