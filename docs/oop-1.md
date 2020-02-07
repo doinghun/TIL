@@ -95,3 +95,48 @@ for(let property in myHouse) {
 }
 console.log(ownProps) // [ 'numBedrooms' ]
 ```
+
+#### Use Prototype Properties to Reduce Duplicate Code
+
+To avoid writing duplicated variable (eg. `this.numLegs = 4`), a better way is to use Dog’s prototype. Properties in the prototype are shared among ALL instances of Dog.
+```javascript
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype.numLegs = 4;
+
+let maltese = new Dog("Koong")
+```
+
+#### protype Props
+
+There are 2 kinds of properties
+- own properties: Defined directly on the object instance itself
+- prototype properties: Defined on the prototype.
+
+How to check?
+```javascript
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in maltese) {
+  if(maltese.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property)
+  }
+}
+
+console.log(ownProps) // [ 'name' ]
+console.log(prototypeProps) // [ 'numLegs' ]
+```
+
+#### Constructor Property
+The constructor property is a reference to the constructor function that created the instance. 
+
+The advantage of the constructor property is that it's possible to check for this property to find out what kind of object it is.
+
+```javascript
+let maltese = new Dog("Koong")
+console.log(maltese.constructor === Dog);  //prints true
+```
