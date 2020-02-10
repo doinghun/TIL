@@ -1,11 +1,11 @@
 ---
 id: oop-1
-title: Object Oriented Programming in JavaScript [Part 1]
+title: OOP in JS [Part 1]
 ---
 
 ### What are Objects
 
-- Objects in JavaScript are used to model real-world objects, giving them properties and behavior just like their real-world counterparts. (Eg. Object - Cars, Property: Wheel)
+- Objects in JavaScript are used to model real-world objects, giving them properties and behavior just like their real-world counterparts. (Eg. Object - Cars, Property - Wheel)
 - These qualities, or properties, define what makes up an object. 
 
 ```javascript
@@ -16,7 +16,7 @@ let dog = {
 ```
 ### Dot Notation
 
-Dot notation is used on the object name, duck, followed by the name of the property, name, to access the value of "Aflac".
+Dot notation is used on the object name, `dog`, followed by the name of the property, `name`, to access the value of "Koong".
 ```javascript
 console.log(dog.name) // "Koong"
 ```

@@ -1,6 +1,6 @@
 ---
 id: for-of-for-in-loops
-title: for...of vs for...in Loops in JavaScript
+title: for...of vs for...in Loops
 ---
 
 ### What is the difference between for-of vs for-in Loops in JavaScript?
