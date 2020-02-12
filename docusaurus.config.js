@@ -3,15 +3,14 @@ module.exports = {
   tagline: 'Public Archive of Everything I Learnt',
   url: 'https://doinghun.github.io',
   baseUrl: '/TIL/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/TIL.png',
   organizationName: 'doinghun', // Usually your GitHub org/user name.
   projectName: 'TIL', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'TIL',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/TIL.png',
       },
       links: [
         {to: 'docs/set-vs-map', label: 'Docs', position: 'left'},

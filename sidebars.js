@@ -7,7 +7,7 @@
 
 module.exports = {
   someSidebar: {
-    JavaScript: ['set-vs-map'],
+    JavaScript: ['set-vs-map','oop-1','oop-2','for-of-for-in-loops','Regex'],
     React: ['react-testing','react-lifecycle'],
     'Data Structure': ['singly-linked-list']
   },
