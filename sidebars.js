@@ -15,6 +15,7 @@ module.exports = {
       "regex"
     ],
     React: ["react-testing", "react-lifecycle", "prop-vs-state"],
+    CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list"]
   }
 }
