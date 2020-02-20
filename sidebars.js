@@ -16,6 +16,7 @@ module.exports = {
     ],
     React: ["react-testing", "react-lifecycle", "prop-vs-state"],
     CSS: ["em-vs-rem"],
-    "Data Structure": ["singly-linked-list"]
+    "Data Structure": ["singly-linked-list"],
+    DevOps: ["docker-pizza-analogy"]
   }
 }
