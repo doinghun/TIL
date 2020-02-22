@@ -1,78 +1,81 @@
 module.exports = {
-  title: 'Today I Learnt',
-  tagline: 'Public Archive of Everything I Learnt',
-  url: 'https://doinghun.github.io',
-  baseUrl: '/TIL/',
-  favicon: 'img/TIL.png',
-  organizationName: 'doinghun', // Usually your GitHub org/user name.
-  projectName: 'TIL', // Usually your repo name.
+  title: "Today Dohun Learned",
+  tagline: "Public Archive of Everything I Learned",
+  url: "https://doinghun.github.io",
+  baseUrl: "/TIL/",
+  favicon: "img/TIL.png",
+  organizationName: "doinghun", // Usually your GitHub org/user name.
+  projectName: "TIL", // Usually your repo name.
   themeConfig: {
     navbar: {
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/TIL.png',
+        alt: "My Site Logo",
+        src: "img/TIL.png"
       },
       links: [
-        {to: 'docs/set-vs-map', label: 'Docs', position: 'left'},
+        { to: "docs/set-vs-map", label: "Docs", position: "left" },
         {
-          href: 'https://github.com/doinghun/TIL',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+          href: "https://github.com/doinghun/TIL",
+          label: "GitHub",
+          position: "right"
+        }
+      ]
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Style Guide',
-        //       to: 'docs/doc1',
-        //     },
-        //     {
-        //       label: 'Second Doc',
-        //       to: 'docs/doc2',
-        //     },
-        //   ],
-        // },
-      
         {
-          title: 'Social',
+          title: "Docs",
           items: [
             {
-              label: 'Blog',
-              href: 'https://doinghun.github.io/',
+              label: "JavaScript",
+              to: "docs/set-vs-map"
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/doinghun/TIL',
+              label: "React",
+              to: "docs/prop-vs-state"
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/dotheVsign',
-            },
-          ],
+              label: "CSS",
+              to: "docs/em-vs-rem"
+            }
+          ]
         },
+
+        {
+          title: "Social",
+          items: [
+            {
+              label: "Blog",
+              href: "https://doinghun.github.io/"
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/doinghun/TIL"
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/dotheVsign"
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Today I Learnt, Inc. Built with Docusaurus.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} TIL, Inc. Built with Docusaurus.`
+    }
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/doinghun/TIL/edit/master/website/',
-          showLastUpdateTime: true,
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/doinghun/TIL/edit/master/website/",
+          showLastUpdateTime: true
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
-};
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      }
+    ]
+  ]
+}
