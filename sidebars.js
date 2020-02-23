@@ -14,13 +14,10 @@ module.exports = {
       "for-of-for-in-loops",
       "regex"
     ],
+    TypeScript: ["intro-to-ts"],
     React: ["react-testing", "react-lifecycle", "prop-vs-state"],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list"],
-<<<<<<< Updated upstream
-    DevOps: ["docker-pizza-analogy"]
-=======
     DevOps: ["docker-pizza-analogy", "container-orchestration"]
->>>>>>> Stashed changes
   }
 }
