@@ -1,9 +1,11 @@
 ---
 id: docker-pizza-analogy
-title: Docker Concept explained in Pizza Baking Analogy
+title: Docker explained in Pizza Baking Analogy
 ---
 
-## Visualising Running Docker similar to Baking Pizza
+## Running Docker = Baking Pizza
+
+![Types](/TIL/img/docker-illustration1.png)
 
 ### **Pizza Making Kit: Docker Image**
 
@@ -17,6 +19,8 @@ The ingredients are the layers. You’ve got crust, sauce, and cheese for this p
 - *crust*: basic ubuntu parent image (The bottom layer that gets built first) 
 - *cheese*: installing an external library like NumPy (second layer to the pizza)
 - *sauce / basil*: the code in a file that you wrote to run your app
+
+![Types](/TIL/img/docker-illustration2.jpeg)
 
 ### **Oven: Docker Platform**
 
