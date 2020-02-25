@@ -61,6 +61,9 @@ module.exports = {
         }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} TIL, Inc. Built with Docusaurus.`
+    },
+    googleAnalytics: {
+      trackingID: "UA-149595338-1"
     }
   },
   presets: [
