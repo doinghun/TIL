@@ -14,7 +14,7 @@ module.exports = {
       "for-of-for-in-loops",
       "regex"
     ],
-    TypeScript: ["intro-to-ts"],
+    TypeScript: ["intro-to-ts", "react-in-ts"],
     React: ["react-testing", "react-lifecycle", "prop-vs-state"],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list"],
