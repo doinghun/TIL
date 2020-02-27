@@ -8,6 +8,8 @@
 module.exports = {
   someSidebar: {
     JavaScript: [
+      "wth-is-es",
+      "let-vs-var"
       "set-vs-map",
       "oop-1",
       "oop-2",
