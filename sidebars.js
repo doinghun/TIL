@@ -9,7 +9,9 @@ module.exports = {
   someSidebar: {
     JavaScript: [
       "wth-is-es",
-      "let-vs-var"
+      "let-vs-var",
+      "cb-promise-asaw",
+      "js-memory-model",
       "set-vs-map",
       "oop-1",
       "oop-2",
