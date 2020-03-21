@@ -19,7 +19,12 @@ module.exports = {
       "regex"
     ],
     TypeScript: ["intro-to-ts", "react-in-ts"],
-    React: ["react-testing", "react-lifecycle", "prop-vs-state"],
+    React: [
+      "react-testing",
+      "react-lifecycle",
+      "prop-vs-state",
+      "react-dropdown"
+    ],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list"],
     DevOps: ["docker-pizza-analogy", "container-orchestration"]
