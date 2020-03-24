@@ -25,6 +25,7 @@ module.exports = {
       "prop-vs-state",
       "react-dropdown"
     ],
+    Angular: ["intro-to-angular"],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list"],
     DevOps: ["docker-pizza-analogy", "container-orchestration"]
