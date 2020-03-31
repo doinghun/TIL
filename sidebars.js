@@ -23,7 +23,8 @@ module.exports = {
       "react-testing",
       "react-lifecycle",
       "prop-vs-state",
-      "react-dropdown"
+      "react-dropdown",
+      "presentational-and-container"
     ],
     Angular: ["intro-to-angular"],
     CSS: ["em-vs-rem"],
