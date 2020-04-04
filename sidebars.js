@@ -16,7 +16,7 @@ module.exports = {
       "oop-1",
       "oop-2",
       "for-of-for-in-loops",
-      "regex"
+      "regex",
     ],
     TypeScript: ["intro-to-ts", "react-in-ts"],
     React: [
@@ -24,11 +24,12 @@ module.exports = {
       "react-lifecycle",
       "prop-vs-state",
       "react-dropdown",
-      "presentational-and-container"
+      "presentational-and-container",
+      "react-hook",
     ],
     Angular: ["intro-to-angular"],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list", "binary-tree-traversal"],
-    DevOps: ["docker-pizza-analogy", "container-orchestration"]
-  }
+    DevOps: ["docker-pizza-analogy", "container-orchestration"],
+  },
 }
