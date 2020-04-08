@@ -32,3 +32,26 @@ function Example() {
 
 `useEffect` replaces the functionality of class-based component's `componentDidMount` & `componentDidUpdate`.
 
+```js
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+    const [resources, setResources] = useState([]);
+
+    const fetchResource = async resource => {
+        // some API call function
+
+        setResources(response.data);
+    }
+
+    useEffect(() => {
+        fetchResource(resource);
+    }, [resource]);
+    // if the resource change then arrow function in useEffect is called, like prev.props !== props in class-based components
+    return(
+        <div>
+           {resources.length}
+        </div>
+    );
+}
+```
