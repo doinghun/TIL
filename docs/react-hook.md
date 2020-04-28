@@ -5,6 +5,8 @@ title: Introduction to React Hook
 
 Hooks are relatively new addition to React. They let you use state and other REact features without writing a class.
 
+## useState
+
 ```js
 import React, { useState } from 'react';
 
@@ -26,4 +28,7 @@ function Example() {
 - `useState` returns a pair: current state value (`count`) & a function that lets you update it (`setCount`).
 - State Hook can be used more than once in a single component.
 
-(Effect Hook TBU)
+## useEffect
+
+`useEffect` replaces the functionality of class-based component's `componentDidMount` & `componentDidUpdate`.
+
