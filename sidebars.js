@@ -17,6 +17,7 @@ module.exports = {
       "oop-2",
       "for-of-for-in-loops",
       "regex",
+      "map-filter-reduce",
     ],
     TypeScript: ["intro-to-ts", "react-in-ts"],
     React: [
