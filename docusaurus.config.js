@@ -10,16 +10,16 @@ module.exports = {
     navbar: {
       logo: {
         alt: "My Site Logo",
-        src: "img/TIL.png"
+        src: "img/TIL.png",
       },
       links: [
         { to: "docs/set-vs-map", label: "Docs", position: "left" },
         {
           href: "https://github.com/doinghun/TIL",
           label: "GitHub",
-          position: "right"
-        }
-      ]
+          position: "right",
+        },
+      ],
     },
     footer: {
       style: "dark",
@@ -29,17 +29,17 @@ module.exports = {
           items: [
             {
               label: "JavaScript",
-              to: "docs/set-vs-map"
+              to: "docs/set-vs-map",
             },
             {
               label: "React",
-              to: "docs/prop-vs-state"
+              to: "docs/prop-vs-state",
             },
             {
               label: "CSS",
-              to: "docs/em-vs-rem"
-            }
-          ]
+              to: "docs/em-vs-rem",
+            },
+          ],
         },
 
         {
@@ -47,24 +47,24 @@ module.exports = {
           items: [
             {
               label: "Blog",
-              href: "https://doinghun.github.io/"
+              href: "https://dohun.xyz",
             },
             {
               label: "GitHub",
-              href: "https://github.com/doinghun/TIL"
+              href: "https://github.com/doinghun/TIL",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/dotheVsign"
-            }
-          ]
-        }
+              href: "https://twitter.com/dotheVsign",
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} TIL, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} TIL, Inc. Built with Docusaurus.`,
     },
     googleAnalytics: {
-      trackingID: "UA-149595338-1"
-    }
+      trackingID: "UA-149595338-1",
+    },
   },
   presets: [
     [
@@ -73,12 +73,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/doinghun/TIL/edit/master/website/",
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      }
-    ]
-  ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+  ],
 }

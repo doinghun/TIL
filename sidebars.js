@@ -31,6 +31,10 @@ module.exports = {
     Angular: ["intro-to-angular"],
     CSS: ["em-vs-rem"],
     "Data Structure": ["singly-linked-list", "binary-tree-traversal"],
-    DevOps: ["docker-pizza-analogy", "container-orchestration"],
+    DevOps: [
+      "docker-command-101",
+      "docker-pizza-analogy",
+      "container-orchestration",
+    ],
   },
 }
