@@ -3,7 +3,7 @@ id: docker-command-101
 title: Docker Command 101 
 ---
 
-# Docker commands to get started 
+# Docker commands for Beginners 101
 
 See all running & stopped containers
 ```

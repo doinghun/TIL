@@ -25,6 +25,7 @@ module.exports = {
       "react-lifecycle",
       "prop-vs-state",
       "react-dropdown",
+      "react-redux-analogy",
       "presentational-and-container",
       "react-hook",
     ],
