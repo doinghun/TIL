@@ -6,33 +6,16 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import styles from "./styles.module.css"
 
-const features = [
-  {
-    title: <>Learn Everyday</>,
-    imageUrl: "img/undraw_developer.svg",
-    description: <>I try to commit to learning something everyday.</>
-  },
-  {
-    title: <>Byte by Byte</>,
-    imageUrl: "img/undraw_online_test.svg",
-    description: <>Information gained from the all corners of the Web</>
-  }
-]
-
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl)
+function Iframe(props) {
   return (
-    <div className={classnames("col col--6", styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3 className="text--center">{title}</h3>
-      <p className="text--center">{description}</p>
-    </div>
+    <div
+      dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }}
+    />
   )
 }
+
+const iframe =
+  '<iframe src="https://dohun.xyz/TIL-cytoscape/" width="500" height="500" style="border-style: none;  box-shadow: 0px 0px 15px 0px #888888"></iframe>'
 
 function Home() {
   const context = useDocusaurusContext()
@@ -60,17 +43,11 @@ function Home() {
         </div>
       </header>
       <main>
-        {features && features.length && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        <div className="container">
+          <div className={styles.features}>
+            <Iframe iframe={iframe} />
+          </div>
+        </div>
       </main>
     </Layout>
   )

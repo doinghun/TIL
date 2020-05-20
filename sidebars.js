@@ -28,6 +28,7 @@ module.exports = {
       "react-redux-analogy",
       "presentational-and-container",
       "react-hook",
+      "react-cytoscape",
     ],
     Angular: ["intro-to-angular"],
     CSS: ["em-vs-rem"],
