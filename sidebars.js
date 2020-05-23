@@ -31,7 +31,7 @@ module.exports = {
       "react-cytoscape",
     ],
     Angular: ["intro-to-angular"],
-    CSS: ["em-vs-rem"],
+    CSS: ["em-vs-rem", "css-centering"],
     "Data Structure": ["singly-linked-list", "binary-tree-traversal"],
     DevOps: [
       "docker-command-101",
