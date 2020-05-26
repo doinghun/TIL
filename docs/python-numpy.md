@@ -171,6 +171,156 @@ arr.dtype
 
 # Numpy Operations
 
-Numpy Indexing & Selection
+## Arithmetic
 
-Numpy Exercise
+You can easily perform array with array arithmetic, or scalar with array arithmetic. Let's see some examples:
+
+```py
+import numpy as np
+arr = np.arange(0,10)
+
+arr + arr
+# array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
+
+arr * arr
+# array([ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81])
+
+arr - arr
+# array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+
+arr/arr
+# array([nan,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.])
+# Warning on division by zero, but not an error! Just replaced with nan
+
+# Also warning, but not an error instead infinity
+1/arr
+# array([ inf, 1. , 0.5       , 0.33333333, 0.25 , 0.2, 0.16666667, 0.14285714, 0.125, 0.11111111])
+
+arr**3
+# array([  0,   1,   8,  27,  64, 125, 216, 343, 512, 729])
+```
+
+## Universal Array Functions
+
+```py
+#Taking Square Roots
+np.sqrt(arr)
+
+#Calcualting exponential (e^)
+np.exp(arr)
+
+np.max(arr) #same as arr.max()
+
+np.sin(arr)
+
+np.log(arr)
+```
+# Numpy Indexing & Selection
+
+```py
+import numpy as np
+
+arr = np.arange(0,11)
+# array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+```
+
+## Bracket Indexing and Selection
+
+The simplest way to pick one or some elements of an array looks very similar to python lists:
+
+```py
+##Get a value at an index
+arr[8]
+# 8
+
+##Get values in a range
+arr[1:5]
+# array([1, 2, 3, 4])
+arr[0:5]
+# array([0, 1, 2, 3, 4])
+
+```
+## Broadcasting
+
+Numpy arrays differ from a normal Python list because of their ability to broadcast:
+```py
+## Setting a value with index range (Broadcasting)
+
+arr[0:5]=100
+# array([100, 100, 100, 100, 100,   5,   6,   7,   8,   9,  10])
+
+## Reset array 
+arr = np.arange(0,11)
+
+slice_of_arr = arr[0:6]
+# array([0, 1, 2, 3, 4, 5])
+
+#Change Slice
+slice_of_arr[:]=99
+
+#Show Slice again
+slice_of_arr
+# array([99, 99, 99, 99, 99, 99])
+
+# [Now note the changes also occur in our original array]
+
+arr
+# array([99, 99, 99, 99, 99, 99,  6,  7,  8,  9, 10])
+
+
+# [Data is not copied, it's a view of the original array! This avoids memory problems]
+
+#To get a copy, need to be explicit
+arr_copy = arr.copy()
+# array([99, 99, 99, 99, 99, 99,  6,  7,  8,  9, 10])
+```
+## Indexing a 2D array (matrices)
+
+The general format is 
+**`arr_2d[row][col]`** or **`arr_2d[row,col]`**.
+
+Recommended: Using the comma notation for clarity.
+
+```py
+arr_2d = np.array(([5,10,15],[20,25,30],[35,40,45]))
+# array([[ 5, 10, 15],
+#        [20, 25, 30],
+#        [35, 40, 45]])
+
+arr_2d[1]
+# array([20, 25, 30])
+
+## Getting individual element value
+arr_2d[1][0]
+arr_2d[1,0]
+# 20
+
+
+## 2D array slicing
+
+# Shape (2,2) from top right corner
+arr_2d[:2,1:]
+# array([[10, 15],
+#       [25, 30]])
+
+# Shape bottom row
+arr_2d[2]
+arr_2d[2,:]
+# array([35, 40, 45])
+```
+
+## Conditional Selection
+```py
+arr = np.arange(1,11)
+# array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+bool_arr = arr>4
+# array([False, False, False, False,  True,  True,  True,  True,  True, True])
+
+arr[bool_arr]
+# array([ 5, 6, 7, 8, 9, 10])
+
+arr[arr>2]
+# array([ 3, 4, 5, 6, 7, 8, 9, 10])
+```
