@@ -3,7 +3,7 @@ id: python-pandas-intro
 title: Intro to Python Pandas
 ---
 
-## Serie
+# Series
 
 - Similar to Numpy array except it can be named or given datetime index (instead of numerical index)
 
@@ -90,3 +90,162 @@ ser1 + ser2
 
 # no match => null value
 ```
+
+# DataFrames
+
+DataFrames are the workhorse of pandas and are directly inspired by the R programming language. We can think of a DataFrame as a bunch of Series objects put together to share the same index.
+
+```py
+import pandas as pd
+import numpy as np
+
+from numpy.random import randn
+np.random.seed(101)
+
+df = pd.DataFrame(
+    randn(5,4), #data
+    index='A B C D E'.split(), #index
+    columns='W X Y Z'.split() #columns
+    )
+```
+
+## Selection & Indexing
+
+### Columns 
+
+```py
+df['W']
+
+# Pass a list of column names
+df[['W','Z']]
+```
+
+DataFrame Columns are just Series
+
+```py
+type(df['W'])
+# pandas.core.series.Series
+```
+
+Creating a new column:
+```py
+df['new'] = df['W'] + df['Y']
+```
+
+Removing columns
+```py
+# axis = 0 : row
+# axis = 1 : column
+
+df.drop('new',axis=1) # Not Inplace
+
+df.drop('new',axis=1,inplace=True) # Inplace
+```
+
+### Rows
+
+```py
+# label based index
+df.loc['A'] 
+
+W    2.706850
+X    0.628133
+Y    0.907969
+Z    0.503826
+Name: A, dtype: float64
+
+# numerical based index
+df.iloc[2]
+
+W   -2.018168
+X    0.740122
+Y    0.528813
+Z   -0.589001
+Name: C, dtype: float64
+```
+
+Selecting subset of rows & columns
+
+```py
+df.loc['B','Y'] #[R,C]
+-0.84807698340363147
+
+df.loc[['A','B'],['W','Y']]
+```
+|     | W        | Y         |
+| --- | -------- | --------- |
+| A   | 2.706850 | 0.907969  |
+| B   | 0.651118 | -0.848077 |
+
+### Conditional Selection
+
+An important feature of pandas is conditional selection using bracket notation, very similar to numpy.
+
+```py
+df
+```
+|     | W         | X         | Y         | Z         |
+| --- | --------- | --------- | --------- | --------- |
+| A   | 2.706850  | 0.628133  | 0.907969  | 0.503826  |
+| B   | 0.651118  | -0.319318 | -0.848077 | 0.605965  |
+| C   | -2.018168 | 0.740122  | 0.528813  | -0.589001 |
+| D   | 0.188695  | -0.758872 | -0.933237 | 0.955057  |
+| E   | 0.190794  | 1.978757  | 2.605967  | 0.683509  |
+
+```py
+df>0
+# returns 5x4 table of boolean
+
+df[df>0]
+# returns 5x4 table with +ve num
+
+df[df['W']>0]
+# returns 4x4 table where column W has only +ve num
+
+df[df['W']>0]['Y']
+# returns Series of Y column which satisfies the condition
+
+df[df['W']>0]['Y','X']
+# returns 4x2 table of Y & X which satisfies the condition
+
+## For two conditions, use | and & with parenthesis: (Can't use `and`)
+
+df[(df['W']>0) & (df['Y'] > 1)]
+```
+
+## More Index Details
+
+```py
+# Reset to dafult 0,1...n index
+df.reset_index()
+#(Need Inplace arg)
+```
+
+```py
+newind = 'CA NY WY OR CO'.split()
+
+df['States'] = newind
+
+df
+```
+|     | W         | X         | Y         | Z         | States |
+| --- | --------- | --------- | --------- | --------- | ------ |
+| A   | 2.706850  | 0.628133  | 0.907969  | 0.503826  | CA     |
+| B   | 0.651118  | -0.319318 | -0.848077 | 0.605965  | NY     |
+| C   | -2.018168 | 0.740122  | 0.528813  | -0.589001 | WY     |
+| D   | 0.188695  | -0.758872 | -0.933237 | 0.955057  | OR     |
+| E   | 0.190794  | 1.978757  | 2.605967  | 0.683509  | CO     |
+
+```py
+df.set_index('States')
+#(Need Inplace arg)
+
+df.set_index('States',inplace=True)
+```
+| States | W         | X         | Y         | Z         |
+| ------ | --------- | --------- | --------- | --------- |
+| CA     | 2.706850  | 0.628133  | 0.907969  | 0.503826  |
+| NY     | 0.651118  | -0.319318 | -0.848077 | 0.605965  |
+| WY     | -2.018168 | 0.740122  | 0.528813  | -0.589001 |
+| OR     | 0.188695  | -0.758872 | -0.933237 | 0.955057  |
+| CO     | 0.190794  | 1.978757  | 2.605967  | 0.683509  |
