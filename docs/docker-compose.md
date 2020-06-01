@@ -10,4 +10,5 @@ Use a YAML file to configure your application’s services. Then, with a single 
 Using Docker Compose
 
 1. Define app's environment with `Dockerfile` so it can be reproduced anywhere
-2. Define servies that make up your app in `docker-compose.yml` so they can be run togther in an isolated env
+2. Define services that make up your app in `docker-compose.yml` so they can be run togther in an isolated env
+3. Run `docker-compose up` and Compose starts and runs your entire app.
