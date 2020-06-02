@@ -1,5 +1,5 @@
 ---
-id: regex
+id: js-regex
 title: Regex 
 ---
 

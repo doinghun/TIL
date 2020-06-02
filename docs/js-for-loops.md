@@ -1,5 +1,5 @@
 ---
-id: for-of-for-in-loops
+id: js-for-loops
 title: for...of vs for...in Loops
 ---
 

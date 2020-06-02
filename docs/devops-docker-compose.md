@@ -1,5 +1,5 @@
 ---
-id: docker-compose
+id: devops-docker-compose
 title: Using Docker Compose
 ---
 

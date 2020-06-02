@@ -1,5 +1,5 @@
 ---
-id: singly-linked-list
+id: ds-singly-linked-list
 title: Singly Linked List
 ---
 

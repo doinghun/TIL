@@ -13,7 +13,7 @@ module.exports = {
         src: "img/TIL.png",
       },
       links: [
-        { to: "docs/set-vs-map", label: "Docs", position: "left" },
+        { to: "docs/js-wth-is-es", label: "Docs", position: "left" },
         {
           href: "https://github.com/doinghun/TIL",
           label: "GitHub",
@@ -29,15 +29,15 @@ module.exports = {
           items: [
             {
               label: "JavaScript",
-              to: "docs/set-vs-map",
+              to: "docs/js-wth-is-es",
             },
             {
               label: "React",
-              to: "docs/prop-vs-state",
+              to: "docs/react-prop-vs-state",
             },
             {
               label: "CSS",
-              to: "docs/em-vs-rem",
+              to: "docs/css-em-vs-rem",
             },
           ],
         },

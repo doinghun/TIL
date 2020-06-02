@@ -1,5 +1,5 @@
 ---
-id: let-vs-var
+id: js-let-vs-var
 title: let vs var in JavaScript
 ---
 

@@ -1,4 +1,7 @@
-Useful Methods in Pandas
+---
+id: python-pandas-methods
+title: Useful Methods in Pandas
+---
 
 ## Handling Missing Data
 

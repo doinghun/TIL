@@ -1,5 +1,5 @@
 ---
-id: oop-1
+id: js-oop-1
 title: OOP in JS [Part 1]
 ---
 

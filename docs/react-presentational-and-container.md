@@ -1,5 +1,5 @@
 ---
-id: presentational-and-container
+id: react-presentational-and-container
 title: Presentational and Container Components Pattern in React
 ---
 

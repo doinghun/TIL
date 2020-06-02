@@ -35,7 +35,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/set-vs-map")}
+              to={useBaseUrl("docs/js-wth-is-es")}
             >
               Look Around
             </Link>

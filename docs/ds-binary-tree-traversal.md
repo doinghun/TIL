@@ -1,5 +1,5 @@
 ---
-id: binary-tree-traversal
+id: ds-binary-tree-traversal
 title: Binary Tree Traversal
 ---
 ## Binary Tree Traversal

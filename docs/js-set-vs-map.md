@@ -1,5 +1,5 @@
 ---
-id: set-vs-map
+id: js-set-vs-map
 title: Set vs Map
 ---
 

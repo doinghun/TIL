@@ -1,5 +1,5 @@
 ---
-id: prop-vs-state
+id: react-prop-vs-state
 title: Prop vs State
 ---
 ## What are Props?
