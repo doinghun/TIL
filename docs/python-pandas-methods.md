@@ -310,6 +310,7 @@ df.sort_values(by='col2') #inplace=False by default
 | 2   | 666  | ghi  |
 
 **Find Null Values or Check for Null Values**
+
 ```py
 df.isnull()
 ```
@@ -349,4 +350,58 @@ bar	one	4.0	1.0
 two	NaN	5.0
 foo	one	1.0	3.0
 two	2.0	NaN
+```
+
+# Data Input and Output
+
+## CSV
+
+### CSV Input
+
+Read csv file
+
+```
+df = pd.read_csv('example')
+```
+
+Write to csv file
+
+```
+df.to_csv('example',index=False)
+```
+
+## Excel
+
+### Excel Input
+Read Excel File
+```py
+pd.read_excel('Excel_Sample.xlsx',sheet_name='Sheet1')
+```
+
+### Excel Output
+Write to Excel File
+```py
+df.to_excel('Excel_Sample.xlsx',sheet_name='Sheet1')
+```
+
+## HTML
+
+You may need to install htmllib5,lxml, and BeautifulSoup4. In your terminal/command prompt run:
+
+    conda install lxml
+    conda install html5lib
+    conda install BeautifulSoup4
+
+Then restart Jupyter Notebook.
+(or use pip install if you aren't using the Anaconda Distribution)
+
+Pandas can read table tabs off of html. For example:
+
+### HTML Input
+
+Pandas read_html function will read tables off of a webpage and return a list of DataFrame objects:
+
+```py
+df = pd.read_html('http://www.fdic.gov/bank/individual/failed/banklist.html')
+df[0]
 ```
