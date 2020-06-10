@@ -1,5 +1,5 @@
 ---
-id: react-cytoscape
+id: react-make-cytoscape
 title: Creating Cytoscape in React
 ---
 

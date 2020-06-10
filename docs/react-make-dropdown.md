@@ -1,5 +1,5 @@
 ---
-id: react-dropdown
+id: react-make-dropdown
 title: Creating Dropdown in React
 ---
 
