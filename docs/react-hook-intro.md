@@ -1,5 +1,5 @@
 ---
-id: react-hook
+id: react-hook-intro
 title: Introduction to React Hook
 ---
 
