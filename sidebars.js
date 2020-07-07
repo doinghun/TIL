@@ -32,7 +32,12 @@ module.exports = {
       "react-testing",
     ],
     Angular: ["intro-to-angular"],
-    CSS: ["css-em-vs-rem", "css-centering"],
+    CSS: [
+      "css-em-vs-rem",
+      "css-centering",
+      "css-flexbox",
+      "css-scss-vs-styled-comp",
+    ],
     "Data Structure": ["ds-binary-tree-traversal", "ds-singly-linked-list"],
     DevOps: [
       "devops-docker-command-101",
@@ -40,6 +45,7 @@ module.exports = {
       "devops-docker-pizza-analogy",
       "devops-container-orchestration",
     ],
+    Cloud: ["cloud-iam"],
     Python: [
       "python-anaconda",
       "python-bootcamp",
