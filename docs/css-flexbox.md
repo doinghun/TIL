@@ -16,6 +16,8 @@ title: CSS Flexbox 101
   - cross-start | cross-end
   - cross size
 
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg" width="400">
+
 ## Properties for the Parent (flex container)
 
 ### display
@@ -55,7 +57,7 @@ Shortcut for defining `flex-direction` & `flex-wrap` together
 
 ### justify-content
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg" alt="" style="width:300px;"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg" width="400" />
 
 Defines the alignment along the **main axis**.
 
@@ -72,7 +74,7 @@ Defines the alignment along the **main axis**.
 
 ### align-items
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg" alt="" style="width:300px;"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg" width="400" />
 
 Defines the alignment along the **cross axis**.
 (`justify-content` of cross-axis)
@@ -85,7 +87,7 @@ Defines the alignment along the **cross axis**.
 
 ### align-content
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="" style="width:300px;"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" width="400" />
 
 This aligns a flex container’s lines within *when there is extra space* in the **cross-axis**, similar to how justify-content aligns individual items within the main-axis.
 
@@ -96,6 +98,45 @@ This aligns a flex container’s lines within *when there is extra space* in the
 - `space-around`: items evenly distributed with equal space around each line
 - `space-evenly`: items are evenly distributed with equal space around them
 - `stretch` (default): lines stretch to take up the remaining space
+
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg" width="400">
+
+## Properties for the Children (flex items)
+
+### order
+
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/order.svg" width="400">
+
+The order property controls the order in which they appear in the flex container.
+
+```css
+.item {
+  order: 5; /* default is 0 */
+}
+```
+
+### flex-grow
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" width="400">
+
+This defines the ability for a flex item to grow if necessary. It dictates what amount of the available space inside the flex container the item should take up.
+
+If all items have `flex-grow` set to 1, the remaining space in the container will be distributed equally to all children. 
+
+If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
+
+```css
+.item {
+  flex-grow: 4; /* default 0 */
+}
+```
+
+### flex-shrink
+
+### flex-basis
+
+### flex
+
+### align-self
 
 Reference
 ---
