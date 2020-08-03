@@ -16,7 +16,7 @@ title: CSS Flexbox 101
   - cross-start | cross-end
   - cross size
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg" width="400">
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg" width="400" />
 
 ## Properties for the Parent (flex container)
 
@@ -99,24 +99,30 @@ This aligns a flex container’s lines within *when there is extra space* in the
 - `space-evenly`: items are evenly distributed with equal space around them
 - `stretch` (default): lines stretch to take up the remaining space
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg" width="400">
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg" width="400" />
 
 ## Properties for the Children (flex items)
 
 ### order
 
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/order.svg" width="400">
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/order.svg" width="400" />
 
 The order property controls the order in which they appear in the flex container.
 
 ```css
-.item {
-  order: 5; /* default is 0 */
+.item1 {
+  order: 2; /* default is 0 */
 }
+
+.item2 {
+  order 1;
+}
+
+| item2 | item 1 |
 ```
 
 ### flex-grow
-<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" width="400">
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" width="400" />
 
 This defines the ability for a flex item to grow if necessary. It dictates what amount of the available space inside the flex container the item should take up.
 
@@ -132,11 +138,46 @@ If one of the children has a value of 2, the remaining space would take up twice
 
 ### flex-shrink
 
+This defines the ability for a flex item to shrink if necessary.
+
+```css
+.item1 {
+  flex-shrink: 1; /* default 1 */
+}
+
+.item2 {
+  flex-shrink: 2; /* default 1 */
+}
+
+| item 1 | item 1 | item 2 |
+```
+
 ### flex-basis
 
+- Specifies the initial size of the item before CSS makes adjustments with `flex-shrink` / `flex-grow`
+- If set to `auto`, sizes items based on the content
+
 ### flex
+- Shortcut to set several flex properties at once.
+
+```css
+.item {
+  flex: flex-grow flex-shrink flex-basis;
+  flex: 1 0 10px
+}
+```
 
 ### align-self
+
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-self.svg" width="400" />
+
+- Allows the default alignment to be overriden for individual flex items.
+
+```css
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
 
 Reference
 ---
