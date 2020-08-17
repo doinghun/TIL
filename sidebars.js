@@ -35,8 +35,10 @@ module.exports = {
     CSS: [
       "css-em-vs-rem",
       "css-centering",
+      "css-grid",
       "css-flexbox",
       "css-scss-vs-styled-comp",
+      "css-stacking",
     ],
     "Data Structure": ["ds-binary-tree-traversal", "ds-singly-linked-list"],
     DevOps: [
