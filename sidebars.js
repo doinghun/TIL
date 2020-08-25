@@ -35,8 +35,9 @@ module.exports = {
     CSS: [
       "css-em-vs-rem",
       "css-centering",
-      "css-grid",
       "css-flexbox",
+      "css-grid",
+      "css-responsive",
       "css-scss-vs-styled-comp",
       "css-stacking",
     ],
