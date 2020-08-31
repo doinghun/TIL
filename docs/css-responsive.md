@@ -1,5 +1,5 @@
 ---
-id: css-reponsive
+id: css-responsive
 title: CSS Reponsive Web Design Princicples
 ---
 

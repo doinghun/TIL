@@ -39,6 +39,7 @@ module.exports = {
       "css-grid",
       "css-responsive",
       "css-scss-vs-styled-comp",
+      "css-scroll-behavior",
       "css-stacking",
     ],
     "Data Structure": ["ds-binary-tree-traversal", "ds-singly-linked-list"],
