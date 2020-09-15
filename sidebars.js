@@ -18,6 +18,7 @@ module.exports = {
       "js-for-loops",
       "js-memory-model",
       "js-regex",
+      "js-making-cli-app-with-inquirer.js.md",
     ],
     TypeScript: ["intro-to-ts", "react-in-ts"],
     React: [
