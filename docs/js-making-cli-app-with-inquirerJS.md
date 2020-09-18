@@ -1,5 +1,5 @@
 ---
-id: js-making-cli-app-with-inquirer.js.md
+id: js-making-cli-app-with-inquirerJS
 title: Making CLI app with Inquirer.js
 ---
 
