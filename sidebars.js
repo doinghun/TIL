@@ -11,6 +11,7 @@ module.exports = {
       "js-wth-is-es",
       "js-let-vs-var",
       "js-cb-promise-asaw",
+      "js-closure",
       "js-map-filter-reduce",
       "js-set-vs-map",
       "js-oop-1",
