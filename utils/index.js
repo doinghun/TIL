@@ -8,7 +8,7 @@ const questions = [
     type: "list",
     name: "topic",
     message: "TIL Topic?",
-    choices: ["React", "CSS", "JS", "TS"],
+    choices: ["React", "CSS", "JS", "TS", "DevOps", "Cloud", "Python", "DS"],
     filter: function (val) {
       return val.toLowerCase()
     },
