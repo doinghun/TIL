@@ -25,6 +25,7 @@ module.exports = {
     React: [
       "react-prop-vs-state",
       "react-lifecycle",
+      "react-lists-and-keys-in-react.md",
       "react-redux-analogy",
       "react-presentational-and-container",
       "react-hook-intro",
@@ -65,4 +66,3 @@ module.exports = {
     ],
   },
 }
-"react-lists-and-keys-in-react.md"

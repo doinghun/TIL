@@ -1,5 +1,5 @@
 ---
-id: js-closure.md
+id: js-closure
 title: Closure in JavaScript
 ---
 
