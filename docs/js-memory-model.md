@@ -6,7 +6,7 @@ title: JS Memory Model
 
 Using JavaScript, declaring variables, initializing them, and assigning them new values later on is something we do on a daily basis. So what actually happens in memory when we declare & assign value?
 
-![js-memorymodel](/TIL/img/js-memory-model.png)
+![js-memorymodel](/img/js-memory-model.png)
 
 ### Variable declarations and assignments for JS primitives
 
@@ -16,7 +16,7 @@ let newVar = myNumber;
 myNumber = myNumber + 1;
 ```
 
-![js-memorymodel1](/TIL/img/js-memory-model1.jpeg)
+![js-memorymodel1](/img/js-memory-model1.jpeg)
 
 > The call stack is where primitives are stored (in addition to function calls). While the heap is where non-primitives are stored. The key difference is that the heap can store unordered data that can grow dynamically—perfect for arrays and objects.
 
@@ -28,7 +28,7 @@ What actually happens in memory when we declare & assign value?
 let myArray = [];
 ```
 
-![js-memorymodel2](/TIL/img/js-memory-model2.jpeg)
+![js-memorymodel2](/img/js-memory-model2.jpeg)
 
 ### Let vs Const
 

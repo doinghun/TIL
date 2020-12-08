@@ -4,7 +4,7 @@ title: React Lifecycle
 ---
 ## What are the different phases of the component lifecycle in React?
 
-![Lifecycle](/TIL/img/react-lifecycle-diagram-detailed.png)
+![Lifecycle](/img/react-lifecycle-diagram-detailed.png)
 
 There are four different phases of component’s lifecycle:
 

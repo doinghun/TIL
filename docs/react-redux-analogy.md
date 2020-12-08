@@ -15,7 +15,7 @@ Redux using analogy of insurance company. Redux consist of
 - Reducers
 - State
 
-![Diagram](/TIL/img/react-redux-analogy.png)
+![Diagram](/img/react-redux-analogy.png)
 
 1. In the analogy, Person **(Action Creator)** drops off a form **(Action)** stating policy or claim at the front desk of insurance company
 2. Form receiver **(dispatch)** hand over the form to insurance departments consisting of accounting, policies and claim history **(Reducers)**. 
@@ -23,4 +23,4 @@ Redux using analogy of insurance company. Redux consist of
 
 ## Non-Analogy Diagram of React Redux system
 
-![Diagram](/TIL/img/reactreduxdiagram.gif)
+![Diagram](/img/reactreduxdiagram.gif)

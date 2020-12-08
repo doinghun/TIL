@@ -35,7 +35,7 @@ inquirer.prompt(questions).then((answers) => {
   const lowerTitle = title.toLowerCase().replace(/ /g, "-")
   const newFile = `${topic}-${lowerTitle}.md`
   fs.writeFile(
-    `docs/${newFile}`,
+    `/${newFile}`,
     `---\nid: ${newFile}\ntitle: ${title}\n---`,
     (err) => {
       if (err) return console.log(err)
@@ -68,7 +68,7 @@ rl.question(`TIL Topic? `, (topic) => {
     let titleLower = title.replace(/\s+/g, "-").toLowerCase()
     let newFile = `${topicLower}-${titleLower}.md`
     fs.writeFile(
-      `docs/${newFile}`,
+      `/${newFile}`,
       `---\nid: ${newFile}\ntitle: ${title}\n---`,
       (err) => {
         if (err) return console.log(err)

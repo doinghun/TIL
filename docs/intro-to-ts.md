@@ -13,7 +13,7 @@ TS Type System
  - Only active *during development*
  - Doesn't provide any performance optimization
 
-![Types](/TIL/img/typescript-types.png)
+![Types](/img/typescript-types.png)
 
 ### What is Type?
 

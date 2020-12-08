@@ -12,7 +12,7 @@ title: Binary Tree Traversal
   Then traverse the left subtree.
   Finally, traverse the right subtree.
 
-![Preorder Traversal](/TIL/img/preorder_traversal.jpg)*[ A → B → D → E → C → F → G ]*
+![Preorder Traversal](/img/preorder_traversal.jpg)*[ A → B → D → E → C → F → G ]*
 
 **Javascript Solution**
 
@@ -44,7 +44,7 @@ var preorderTraversal = function(root) {
   Then visit the root.
   Finally, traverse the right subtree.
 
-![In-order Traversal](/TIL/img/inorder_traversal.jpg)*[D → B → E → A → F → C → G]*
+![In-order Traversal](/img/inorder_traversal.jpg)*[D → B → E → A → F → C → G]*
 
 **Javascript Solution**
 
@@ -78,7 +78,7 @@ var inorderTraversal = function(root) {
   Then traverse the right subtree.
   Finally, visit the root.
 
-![Post-order Traversal](/TIL/img/postorder_traversal.jpg)*[D → E → B → F → G → C → A]*
+![Post-order Traversal](/img/postorder_traversal.jpg)*[D → E → B → F → G → C → A]*
 
 **Javascript Solution**
 
@@ -109,7 +109,7 @@ Level-order traversal is to traverse the tree level by level.
 
 `Breadth-First Search` is an algorithm to traverse or search in data structures like a tree or a graph. The algorithm starts with a root node and visit the node itself first. Then traverse its neighbors, traverse its second level neighbors, traverse its third level neighbors, so on and so forth.
 
-![BFS](/TIL/img/bfs.png)
+![BFS](/img/bfs.png)
 
 ie. Given Binary Tree
 
