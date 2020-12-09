@@ -1,3 +1,6 @@
+const math = require("remark-math")
+const katex = require("rehype-katex")
+
 module.exports = {
   title: "Today Dohun Learned",
   tagline: "Public Archive of Everything I Learned",
@@ -12,8 +15,25 @@ module.exports = {
         alt: "My Site Logo",
         src: "img/TIL.png",
       },
-      links: [
-        { to: "docs/js-wth-is-es", label: "Docs", position: "left" },
+      items: [
+        {
+          label: "Docs",
+          position: "left",
+          items: [
+            { label: "Dev", to: "js-wth-is-es" },
+            { label: "Finance", to: "finance-per" },
+          ],
+        },
+        {
+          href: "https://dohun.xyz/about",
+          label: "About",
+          position: "right",
+        },
+        {
+          href: "https://dohun.xyz",
+          label: "Blog",
+          position: "right",
+        },
         {
           href: "https://github.com/doinghun/TIL",
           label: "GitHub",
@@ -29,15 +49,15 @@ module.exports = {
           items: [
             {
               label: "JavaScript",
-              to: "docs/js-wth-is-es",
+              to: "/js-wth-is-es",
             },
             {
               label: "React",
-              to: "docs/react-prop-vs-state",
+              to: "/react-prop-vs-state",
             },
             {
               label: "CSS",
-              to: "docs/css-em-vs-rem",
+              to: "/css-em-vs-rem",
             },
           ],
         },
@@ -71,14 +91,26 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/doinghun/TIL/edit/master/website/",
           showLastUpdateTime: true,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
+  ],
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      crossorigin: "anonymous",
+    },
   ],
 }
