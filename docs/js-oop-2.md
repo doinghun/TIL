@@ -23,13 +23,15 @@ Dog.prototype.isPrototypeOf(maltese);
 ```
 
 #### Prototype Chain
-All objects in JavaScript (with a few exceptions) have a prototype. Also, an object’s prototype itself is an object. Because a prototype is an object, a prototype can have its own prototype! 
+
+All objects in JavaScript (with a few exceptions) have a prototype. Also, an object’s prototype itself is an object. Because a prototype is an object, a prototype can have its own prototype!
 
 ```javascript
-Object.prototype.isPrototypeOf(Dog.prototype) // true
+Object.prototype.isPrototypeOf(Dog.prototype); // true
 ```
 
-For example, The `hasOwnProperty` method is defined in `Object.prototype`, which can be accessed by `Dog.prototype`, which can then be accessed by `maletese`. 
+For example, The `hasOwnProperty` method is defined in `Object.prototype`, which can be accessed by `Dog.prototype`, which can then be accessed by `maletese`.
+
 ```javascript
 maltese.hasOwnProperty("name"); // => true
 
@@ -49,9 +51,9 @@ function Cat(name) {
 
 Cat.prototype = {
   constructor: Cat,
-  eat: function() {
+  eat: function () {
     console.log("nom nom nom");
-  }
+  },
 };
 
 function Bear(name) {
@@ -60,61 +62,66 @@ function Bear(name) {
 
 Bear.prototype = {
   constructor: Bear,
-  eat: function() {
+  eat: function () {
     console.log("nom nom nom");
-  }
+  },
 };
 
-function Animal() { }
-Animal.prototype.eat = function() {
-    console.log("nom nom nom");
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log("nom nom nom");
 };
 let animal = Object.create(Animal.prototype);
 
 animal.eat(); // prints "nom nom nom"
 animal instanceof Animal; // => true
-``` 
+```
+
 #### Set the Child's Prototype to an Instance of the Parent
+
 `Object.create(obj)` creates a new object, and sets `obj` as the new object's `prototype`.
 
 ```javascript
 // ChildObject.prototype = Object.create(ParentObject.prototype);
 
-function Dog() { }
+function Dog() {}
 
-Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype = Object.create(Animal.prototype);
 
 let maltese = new Dog();
-maltese.eat();  // Should print "nom nom nom"
+maltese.eat(); // Should print "nom nom nom"
 ```
+
 Set the prototype of the subtype ( `Dog` ) to be an instance of `Animal`.
 
 `maltese` inherits all of `Animal`'s properties, including the eat method.
 
 #### Reset an Inherited Constructor property
+
 When an object inherits its prototype from another object, it also inherits the supertype's constructor property.
 
-
 ```javascript
-maltese.constructor // function Animal(){...}
+maltese.constructor; // function Animal(){...}
 
 /* Manually set Dog's constructor property to the Dog object */
 Dog.prototype.constructor = Dog;
-maltese.constuctor // function Dog(){...}
-
+maltese.constuctor; // function Dog(){...}
 ```
 
 #### Adding Methods After Inheritance
+
 ```javascript
-Dog.prototype.bark = function(){
-    console.log("Woof!")
-}
+Dog.prototype.bark = function () {
+  console.log("Woof!");
+};
 maltese.eat(); // Inherited Method
 maltese.bark(); // Method added after Inheritance
 ```
 
 #### Override Inherited Methods
+
 If you have an instance `let maltese = new Dog();` and you call `maltese.eat()`, this is how JavaScript looks for the method on maltese’s prototype chain:
+
 ```
 maltese => Is eat() defined here? No.
 Dog => Is eat() defined here? => Yes. Execute it and stop searching.
@@ -129,21 +136,21 @@ A mixin allows other objects to use a collection of functions.
 ```javascript
 let bird = {
   name: "Donald",
-  numLegs: 2
+  numLegs: 2,
 };
 
 let boat = {
   name: "Warrior",
-  type: "race-boat"
+  type: "race-boat",
 };
 
 // Add your code below this line
 
-let glideMixin = function(obj) {
-  obj.glide = function(){
-    console.log("Glidee")
-  }
-}
+let glideMixin = function (obj) {
+  obj.glide = function () {
+    console.log("Glidee");
+  };
+};
 
 glideMixin(bird);
 glideMixin(boat);

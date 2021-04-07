@@ -8,19 +8,17 @@ Hooks are relatively new addition to React. They let you use state and other REa
 ## useState
 
 ```js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Example() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    return(
-        <div>
-            <p>{count}</p>
-            <button onClick={() => setCount(count+ 1 )}>
-                Click Me
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Click Me</button>
+    </div>
+  );
 }
 ```
 
@@ -33,25 +31,21 @@ function Example() {
 `useEffect` replaces the functionality of class-based component's `componentDidMount` & `componentDidUpdate`.
 
 ```js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Example() {
-    const [resources, setResources] = useState([]);
+  const [resources, setResources] = useState([]);
 
-    const fetchResource = async resource => {
-        // some API call function
+  const fetchResource = async (resource) => {
+    // some API call function
 
-        setResources(response.data);
-    }
+    setResources(response.data);
+  };
 
-    useEffect(() => {
-        fetchResource(resource);
-    }, [resource]);
-    // if the resource change then arrow function in useEffect is called, like prev.props !== props in class-based components
-    return(
-        <div>
-           {resources.length}
-        </div>
-    );
+  useEffect(() => {
+    fetchResource(resource);
+  }, [resource]);
+  // if the resource change then arrow function in useEffect is called, like prev.props !== props in class-based components
+  return <div>{resources.length}</div>;
 }
 ```

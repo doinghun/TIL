@@ -7,6 +7,6 @@ PER is the ratio for valuing a company that measures its current share price rel
 
 $PER = \frac{\text{Market value per share}}{\text{Earnings per share}}$
 
+_Resource_
 
-*Resource*
 - https://www.investopedia.com/terms/p/price-earningsratio.asp

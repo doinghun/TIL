@@ -7,7 +7,7 @@ title: Closure in JavaScript
 
 "Closures are nothing but FUNCTIONS WITH PRESERVED DATA"
 
-## Examples 
+## Examples
 
 ### Example 1
 
@@ -15,8 +15,8 @@ title: Closure in JavaScript
 var passed = 3;
 
 var addTo = function () {
-    var inner = 2;
-    return passed + inner;
+  var inner = 2;
+  return passed + inner;
 };
 
 console.dir(addTo()); // Closure => var passed = 3;
@@ -29,13 +29,12 @@ console.dir(addTo()); // Closure => var passed = 4;
 ### Example 2
 
 ```js
-var addTo = function(passed) {
-    
-    var add = function(inner){
-        return passed + inner;
-    };
+var addTo = function (passed) {
+  var add = function (inner) {
+    return passed + inner;
+  };
 
-    return add;
+  return add;
 };
 
 var addThree = new addTo(3);

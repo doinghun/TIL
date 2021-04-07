@@ -14,6 +14,7 @@ Highest to Lowest Specificity
 - In cases of equal specificity, last rule is applied
 
 ---
+
 ### References
 
 - https://github.com/30-seconds/30-seconds-of-interviews/blob/master/questions/css-specificity.md

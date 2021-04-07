@@ -15,6 +15,7 @@ df = pd.DataFrame({'A':[1,2,np.nan],
                    'B':[5,np.nan,np.nan],
                    'C':[1,2,3]})
 ```
+
 |     | A   | B   | C   |
 | --- | --- | --- | --- |
 | 0   | 1.0 | 5.0 | 1   |
@@ -22,10 +23,12 @@ df = pd.DataFrame({'A':[1,2,np.nan],
 | 2   | NaN | NaN | 3   |
 
 ## `dropna()`
+
 ```py
 df.dropna()
 # Drop raws with any missing values (NaN / null)
 ```
+
 |     | A   | B   | C   |
 | --- | --- | --- | --- |
 | 0   | 1.0 | 5.0 | 1   |
@@ -51,6 +54,7 @@ df.dropna(thresh=2)
 ```py
 df.fillna(value='FILL VALUE')
 ```
+
 |     | A          | B          | C   |
 | --- | ---------- | ---------- | --- |
 | 0   | 1.0        | 5.0        | 1   |
@@ -77,6 +81,7 @@ data = {'Company':['GOOG','GOOG','MSFT','MSFT','FB','FB'],
        'Sales':[200,120,340,124,243,350]}
 df = pd.DataFrame(data)
 ```
+
 |     | Company | Person  | Sales |
 | --- | ------- | ------- | ----- |
 | 0   | GOOG    | Sam     | 200   |
@@ -97,6 +102,7 @@ by_comp = df.groupby('Company')
 by_comp.mean()
 # df.groupby('Company').mean()
 ```
+
 | Company | Sales |
 | ------- | ----- |
 | FB      | 296.5 |
@@ -104,6 +110,7 @@ by_comp.mean()
 | MSFT    | 232.0 |
 
 Other aggregate methods
+
 ```py
 by_comp.std()
 by_comp.min()
@@ -127,7 +134,7 @@ df2 = pd.DataFrame({'A': ['A4', 'A5', 'A6', 'A7'],
                     'B': ['B4', 'B5', 'B6', 'B7'],
                     'C': ['C4', 'C5', 'C6', 'C7'],
                     'D': ['D4', 'D5', 'D6', 'D7']},
-                    index=[4, 5, 6, 7]) 
+                    index=[4, 5, 6, 7])
 df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
                     'B': ['B8', 'B9', 'B10', 'B11'],
                     'C': ['C8', 'C9', 'C10', 'C11'],
@@ -154,15 +161,16 @@ The `merge` function allows you to merge DataFrames together using a similar log
 left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
                        'A': ['A0', 'A1', 'A2', 'A3'],
                        'B': ['B0', 'B1', 'B2', 'B3']})
-   
+
 right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
                         'C': ['C0', 'C1', 'C2', 'C3'],
-                        'D': ['D0', 'D1', 'D2', 'D3']})    
+                        'D': ['D0', 'D1', 'D2', 'D3']})
 ```
 
 ```py
 pd.merge(left,right,how='inner',on='key')
 ```
+
 |     | key | A   | B   | C   | D   |
 | --- | --- | --- | --- | --- | --- |
 | 0   | K0  | A0  | B0  | C0  | D0  |
@@ -171,20 +179,23 @@ pd.merge(left,right,how='inner',on='key')
 | 3   | K3  | A3  | B3  | C3  | D3  |
 
 More complex example:
+
 ```py
 left = pd.DataFrame({'key1': ['K0', 'K0', 'K1', 'K2'],
                      'key2': ['K0', 'K1', 'K0', 'K1'],
                         'A': ['A0', 'A1', 'A2', 'A3'],
                         'B': ['B0', 'B1', 'B2', 'B3']})
-    
+
 right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
                       'key2': ['K0', 'K0', 'K0', 'K0'],
                          'C': ['C0', 'C1', 'C2', 'C3'],
                          'D': ['D0', 'D1', 'D2', 'D3']})
 ```
+
 ```py
 pd.merge(left, right, on=['key1', 'key2'])
 ```
+
 |     | key1 | key2 | A   | B   | C   | D   |
 | --- | ---- | ---- | --- | --- | --- | --- |
 | 0   | K0   | K0   | A0  | B0  | C0  | D0  |
@@ -194,6 +205,7 @@ pd.merge(left, right, on=['key1', 'key2'])
 ```py
 pd.merge(left, right, how='outer', on=['key1', 'key2'])
 ```
+
 |     | key1 | key2 | A   | B   | C   | D   |
 | --- | ---- | ---- | --- | --- | --- | --- |
 | 0   | K0   | K0   | A0  | B0  | C0  | D0  |
@@ -202,6 +214,7 @@ pd.merge(left, right, how='outer', on=['key1', 'key2'])
 | 3   | K1   | K0   | A2  | B2  | C2  | D2  |
 | 4   | K2   | K1   | A3  | B3  | NaN | NaN |
 | 5   | K2   | K0   | NaN | NaN | C3  | D3  |
+
 ```py
 pd.merge(left, right, how='right', on=['key1', 'key2'])
 pd.merge(left, right, how='left', on=['key1', 'key2'])
@@ -216,7 +229,7 @@ Joining is a convenient method for combining the columns of two potentially diff
 ```py
 left = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
                      'B': ['B0', 'B1', 'B2']},
-                      index=['K0', 'K1', 'K2']) 
+                      index=['K0', 'K1', 'K2'])
 
 right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
                       'D': ['D0', 'D2', 'D3']},
@@ -229,6 +242,7 @@ left.join(right, how='outer')
 ```
 
 # Operations
+
 ```py
 import pandas as pd
 df = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
@@ -242,6 +256,7 @@ df = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def'
 | 3   | 4    | 444  | xyz  |
 
 ## Info on Unique Values
+
 ```py
 df['col2'].unique()
 # array([444, 555, 666])
@@ -255,6 +270,7 @@ df['col2'].value_counts()
 # 666    1
 # Name: col2, dtype: int64
 ```
+
 ## Applying Functions
 
 ```py
@@ -284,6 +300,7 @@ df['col1'].sum()
 ```py
 del df['col1']
 ```
+
 |     | col2 | col3 |
 | --- | ---- | ---- |
 | 0   | 444  | abc  |
@@ -292,6 +309,7 @@ del df['col1']
 | 3   | 444  | xyz  |
 
 **Get column and index names**
+
 ```py
 df.columns
 df.index
@@ -302,6 +320,7 @@ df.index
 ```py
 df.sort_values(by='col2') #inplace=False by default
 ```
+
 |     | col2 | col3 |
 | --- | ---- | ---- |
 | 0   | 444  | abc  |
@@ -314,6 +333,7 @@ df.sort_values(by='col2') #inplace=False by default
 ```py
 df.isnull()
 ```
+
 |     | col2  | col3  |
 | --- | ----- | ----- |
 | 0   | False | False |
@@ -342,9 +362,10 @@ df = pd.DataFrame(data)
 ```py
 df.pivot_table(values='D',index=['A', 'B'],columns=['C'])
 ```
+
 ```
 	C	x	y
-A	B	
+A	B
 ---------------
 bar	one	4.0	1.0
 two	NaN	5.0
@@ -373,13 +394,17 @@ df.to_csv('example',index=False)
 ## Excel
 
 ### Excel Input
+
 Read Excel File
+
 ```py
 pd.read_excel('Excel_Sample.xlsx',sheet_name='Sheet1')
 ```
 
 ### Excel Output
+
 Write to Excel File
+
 ```py
 df.to_excel('Excel_Sample.xlsx',sheet_name='Sheet1')
 ```

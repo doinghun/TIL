@@ -2,6 +2,7 @@
 id: js-memory-model
 title: JS Memory Model
 ---
+
 ## Behind the Scene (JS)
 
 Using JavaScript, declaring variables, initializing them, and assigning them new values later on is something we do on a daily basis. So what actually happens in memory when we declare & assign value?

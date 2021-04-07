@@ -10,8 +10,8 @@ title: for...of vs for...in Loops
 Use `for…of` to iterate over the values in an iterable, like an array for example:
 
 ```javascript
-let animals = ['🐔', '🐷', '🐑', '🐇'];
-let names = ['Gertrude', 'Henry', 'Melvin', 'Billy Bob'];
+let animals = ["🐔", "🐷", "🐑", "🐇"];
+let names = ["Gertrude", "Henry", "Melvin", "Billy Bob"];
 
 for (let animal of animals) {
   // Random name for our animal
@@ -32,9 +32,9 @@ Use `for…in` to iterate over the properties of an object (the object keys):
 
 ```javascript
 let oldCar = {
-  make: 'Toyota',
-  model: 'Tercel',
-  year: '1996'
+  make: "Toyota",
+  model: "Tercel",
+  year: "1996",
 };
 
 for (let key in oldCar) {
@@ -48,7 +48,7 @@ for (let key in oldCar) {
 Can also use `for…in` to iterate over the index values of an iterable like an array or a string:
 
 ```javascript
-let str = 'Turn the page';
+let str = "Turn the page";
 
 for (let index in str) {
   console.log(`Index of ${str[index]}: ${index}`);
@@ -59,4 +59,5 @@ for (let index in str) {
 ```
 
 ---
-*[Reference - https://alligator.io/js/for-of-for-in-loops/](https://alligator.io/js/for-of-for-in-loops/)*
+
+_[Reference - https://alligator.io/js/for-of-for-in-loops/](https://alligator.io/js/for-of-for-in-loops/)_

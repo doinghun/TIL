@@ -20,6 +20,7 @@ d = {'a':10,'b':20,'c':30} # dictionary
 ```
 
 **Using Lists**
+
 ```py
 pd.Series(data=my_list)
 # 0    10
@@ -35,6 +36,7 @@ pd.Series(data=my_list,index=labels)
 ```
 
 **Using NumPy Arrays**
+
 ```py
 pd.Series(arr)
 # 0    10
@@ -50,6 +52,7 @@ pd.Series(arr,labels)
 ```
 
 **Using Dictionary**
+
 ```py
 pd.Series(d)
 # a    10
@@ -77,7 +80,7 @@ ser2 = pd.Series([1,2,5,4],index = ['USA', 'Germany','Italy', 'Japan'])
 # Japan      4
 # dtype: int64
 
-ser1['USA'] 
+ser1['USA']
 # 1
 
 ser1 + ser2
@@ -111,7 +114,7 @@ df = pd.DataFrame(
 
 ## Selection & Indexing
 
-### Columns 
+### Columns
 
 ```py
 df['W']
@@ -128,11 +131,13 @@ type(df['W'])
 ```
 
 Creating a new column:
+
 ```py
 df['new'] = df['W'] + df['Y']
 ```
 
 Removing columns
+
 ```py
 # axis = 0 : row
 # axis = 1 : column
@@ -146,7 +151,7 @@ df.drop('new',axis=1,inplace=True) # Inplace
 
 ```py
 # label based index
-df.loc['A'] 
+df.loc['A']
 
 W    2.706850
 X    0.628133
@@ -172,6 +177,7 @@ df.loc['B','Y'] #[R,C]
 
 df.loc[['A','B'],['W','Y']]
 ```
+
 |     | W        | Y         |
 | --- | -------- | --------- |
 | A   | 2.706850 | 0.907969  |
@@ -184,6 +190,7 @@ An important feature of pandas is conditional selection using bracket notation, 
 ```py
 df
 ```
+
 |     | W         | X         | Y         | Z         |
 | --- | --------- | --------- | --------- | --------- |
 | A   | 2.706850  | 0.628133  | 0.907969  | 0.503826  |
@@ -228,6 +235,7 @@ df['States'] = newind
 
 df
 ```
+
 |     | W         | X         | Y         | Z         | States |
 | --- | --------- | --------- | --------- | --------- | ------ |
 | A   | 2.706850  | 0.628133  | 0.907969  | 0.503826  | CA     |
@@ -242,6 +250,7 @@ df.set_index('States')
 
 df.set_index('States',inplace=True)
 ```
+
 | States | W         | X         | Y         | Z         |
 | ------ | --------- | --------- | --------- | --------- |
 | CA     | 2.706850  | 0.628133  | 0.907969  | 0.503826  |
@@ -266,6 +275,7 @@ hier_index = pd.MultiIndex.from_tuples(hier_index)
 ```py
 df = pd.DataFrame(np.random.randn(6,2),index=hier_index,columns=['A','B'])
 ```
+
 |     |     | A         | B         |
 | --- | --- | --------- | --------- |
 | G1  | 1   | 0.302665  | 1.693723  |
@@ -278,11 +288,13 @@ df = pd.DataFrame(np.random.randn(6,2),index=hier_index,columns=['A','B'])
 ```py
 df.loc['G1']
 ```
+
 |     | A         | B         |
 | --- | --------- | --------- |
 | 1   | 0.302665  | 1.693723  |
 | 2   | -1.706086 | -1.159119 |
 | 3   | -0.134841 | 0.390528  |
+
 ```py
 df.loc['G1'].loc[1]
 
@@ -290,14 +302,16 @@ df.loc['G1'].loc[1]
 # B    1.693723
 # Name: 1, dtype: float64
 ```
+
 ```py
 df.index.names
-# FrozenList([None, None]) 
+# FrozenList([None, None])
 ```
 
 ```py
 df.index.names = ['Group','Num']
 ```
+
 | Group | Num | A         | B         |
 | ----- | --- | --------- | --------- |
 | G1    | 1   | 0.302665  | 1.693723  |
@@ -310,6 +324,7 @@ df.index.names = ['Group','Num']
 ```py
 df.xs('G1') # cross-section
 ```
+
 | Num | A         | B         |
 | --- | --------- | --------- |
 | 1   | 0.302665  | 1.693723  |
@@ -326,6 +341,7 @@ df.xs(['G1',1])
 ```py
 df.xs(1,level='Num')
 ```
+
 | Group | A        | B        |
 | ----- | -------- | -------- |
 | G1    | 0.302665 | 1.693723 |

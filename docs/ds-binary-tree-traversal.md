@@ -2,6 +2,7 @@
 id: ds-binary-tree-traversal
 title: Binary Tree Traversal
 ---
+
 ## Binary Tree Traversal
 
 ### Depth-First Search
@@ -12,30 +13,30 @@ title: Binary Tree Traversal
   Then traverse the left subtree.
   Finally, traverse the right subtree.
 
-![Preorder Traversal](/img/preorder_traversal.jpg)*[ A → B → D → E → C → F → G ]*
+![Preorder Traversal](/img/preorder_traversal.jpg)_[ A → B → D → E → C → F → G ]_
 
 **Javascript Solution**
 
 ```javascript
-var preorderTraversal = function(root) {
+var preorderTraversal = function (root) {
   //corner case
-  if (root == null) return []
+  if (root == null) return [];
   //declarations
-  let result = []
-  let stack = [root]
+  let result = [];
+  let stack = [root];
   while (stack.length) {
     //initially, stack.length is 1
-    let pointer = stack.pop() //node pointer
-    result.push(pointer.val) //insert pointed node at the end of result
+    let pointer = stack.pop(); //node pointer
+    result.push(pointer.val); //insert pointed node at the end of result
     if (pointer.right) {
-      stack.push(pointer.right) //stack right subtree first
+      stack.push(pointer.right); //stack right subtree first
     }
     if (pointer.left) {
-      stack.push(pointer.left) //stack left subtree on top of right subtree
+      stack.push(pointer.left); //stack left subtree on top of right subtree
     } //iterate until stack is empty
   }
-  return result
-}
+  return result;
+};
 ```
 
 #### In-order Traversal
@@ -44,32 +45,32 @@ var preorderTraversal = function(root) {
   Then visit the root.
   Finally, traverse the right subtree.
 
-![In-order Traversal](/img/inorder_traversal.jpg)*[D → B → E → A → F → C → G]*
+![In-order Traversal](/img/inorder_traversal.jpg)_[D → B → E → A → F → C → G]_
 
 **Javascript Solution**
 
 ```javascript
-var inorderTraversal = function(root) {
+var inorderTraversal = function (root) {
   //corner case
-  if (root == null) return []
+  if (root == null) return [];
   //declaration
-  let result = []
-  let stack = []
-  let pointer = root
+  let result = [];
+  let stack = [];
+  let pointer = root;
   while (stack.length || pointer) {
     if (pointer) {
       //if pointed node is not null
-      stack.push(pointer) //store pointed node at the top of stack
-      pointer = pointer.left //shift pointer to left node
+      stack.push(pointer); //store pointed node at the top of stack
+      pointer = pointer.left; //shift pointer to left node
     } else {
       //if pointed node is null (reached the leaf)
-      pointer = stack.pop() //assign extracted top stack value to pointer
-      result.push(pointer.val) //insert pointed node at the end of result
-      pointer = pointer.right //shift pointer to right node
+      pointer = stack.pop(); //assign extracted top stack value to pointer
+      result.push(pointer.val); //insert pointed node at the end of result
+      pointer = pointer.right; //shift pointer to right node
     }
   }
-  return result
-}
+  return result;
+};
 ```
 
 #### Post-order Traversal
@@ -78,29 +79,29 @@ var inorderTraversal = function(root) {
   Then traverse the right subtree.
   Finally, visit the root.
 
-![Post-order Traversal](/img/postorder_traversal.jpg)*[D → E → B → F → G → C → A]*
+![Post-order Traversal](/img/postorder_traversal.jpg)_[D → E → B → F → G → C → A]_
 
 **Javascript Solution**
 
 ```javascript
-var postorderTraversal = function(root) {
+var postorderTraversal = function (root) {
   //corner case
-  if (root == null) return []
+  if (root == null) return [];
   //declarations
-  let result = []
-  let stack = [root]
+  let result = [];
+  let stack = [root];
   while (stack.length) {
-    let pointer = stack.pop() //node pointer
-    result.unshift(pointer.val) //insert pointed node at the front of result
+    let pointer = stack.pop(); //node pointer
+    result.unshift(pointer.val); //insert pointed node at the front of result
     if (pointer.left) {
-      stack.push(pointer.left) //stack left subtree first
+      stack.push(pointer.left); //stack left subtree first
     }
     if (pointer.right) {
-      stack.push(pointer.right) //stack right subtree on top of left subtree
+      stack.push(pointer.right); //stack right subtree on top of left subtree
     }
   }
-  return result
-}
+  return result;
+};
 ```
 
 ### Breadth-First Search
@@ -134,28 +135,28 @@ returns
 **Javascript Solution**
 
 ```javascript
-var levelOrder = function(root) {
-  if (root == null) return []
-  let result = []
-  let queue = [root]
+var levelOrder = function (root) {
+  if (root == null) return [];
+  let result = [];
+  let queue = [root];
   while (queue.length) {
-    let size = queue.length
-    let temp = []
+    let size = queue.length;
+    let temp = [];
     for (i = 0; i < size; i++) {
       // iterate through # of child nodes
-      let node = queue.shift() // queue uses shift vs stack uses pop (see Note)
-      temp.push(node.val)
+      let node = queue.shift(); // queue uses shift vs stack uses pop (see Note)
+      temp.push(node.val);
       if (node.left) {
-        queue.push(node.left) // queue left subtree first
+        queue.push(node.left); // queue left subtree first
       }
       if (node.right) {
-        queue.push(node.right) // queue right subtree after left subtree
+        queue.push(node.right); // queue right subtree after left subtree
       }
     }
-    result.push(temp)
+    result.push(temp);
   }
-  return result
-}
+  return result;
+};
 ```
 
 | After                      | queue (before)      | temp      | queue (after)       | result                  |

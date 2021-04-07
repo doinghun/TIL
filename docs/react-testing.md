@@ -7,7 +7,7 @@ title: Testing in React
 
 Jest Syntax
 
-- **it** ( 'description of the test' , function  containing our test logic)
+- **it** ( 'description of the test' , function containing our test logic)
 
         it('shows a comment box', () => {
         	const div = document.create('div');

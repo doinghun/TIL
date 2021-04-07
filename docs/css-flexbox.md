@@ -21,6 +21,7 @@ title: CSS Flexbox 101
 ## Properties for the Parent (flex container)
 
 ### display
+
 ```css
 .container {
   display: flex;
@@ -28,31 +29,38 @@ title: CSS Flexbox 101
 ```
 
 ### flex direction
+
 ```css
 .container {
-  flex-direction: row | row-reverse | column | column-reverse
+  flex-direction: row | row-reverse | column | column-reverse;
 }
 ```
+
 - `row` (default): left to right in `ltr`;
 - `column`: top to bottom;
 
 ### flex-wrap
+
 ```css
 .container {
   flex-wrap: nowrap | wrap | wrap-reverse;
 }
 ```
+
 - `nowrap` (default): all flex items in one line
 - `wrap`: flex items wrap onto multiple lines (top to bottom)
 - `wrap-reverse`: flex items wrap onto multiple lines (bottom to top)
 
 ### flex-flow
+
 ```css
 .container {
   flex-flow: column wrap;
 }
 ```
+
 Shortcut for defining `flex-direction` & `flex-wrap` together
+
 - default: `row nowrap`
 
 ### justify-content
@@ -89,7 +97,7 @@ Defines the alignment along the **cross axis**.
 
 <img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" width="400" />
 
-This aligns a flex container’s lines within *when there is extra space* in the **cross-axis**, similar to how justify-content aligns individual items within the main-axis.
+This aligns a flex container’s lines within _when there is extra space_ in the **cross-axis**, similar to how justify-content aligns individual items within the main-axis.
 
 - `flex-start / start`: items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.
 - `flex-end / end`: items packed to the end of the container. The (more support) flex-end honors the flex-direction while end honors the writing-mode direction.
@@ -122,11 +130,12 @@ The order property controls the order in which they appear in the flex container
 ```
 
 ### flex-grow
+
 <img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" width="400" />
 
 This defines the ability for a flex item to grow if necessary. It dictates what amount of the available space inside the flex container the item should take up.
 
-If all items have `flex-grow` set to 1, the remaining space in the container will be distributed equally to all children. 
+If all items have `flex-grow` set to 1, the remaining space in the container will be distributed equally to all children.
 
 If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
 
@@ -158,12 +167,13 @@ This defines the ability for a flex item to shrink if necessary.
 - If set to `auto`, sizes items based on the content
 
 ### flex
+
 - Shortcut to set several flex properties at once.
 
 ```css
 .item {
   flex: flex-grow flex-shrink flex-basis;
-  flex: 1 0 10px
+  flex: 1 0 10px;
 }
 ```
 
@@ -179,6 +189,6 @@ This defines the ability for a flex item to shrink if necessary.
 }
 ```
 
-Reference
----
+## Reference
+
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/

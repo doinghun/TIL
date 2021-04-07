@@ -9,12 +9,12 @@ title: CSS Scroll Behavior
 
 ```css
 .module {
-   scroll-behaviour: [ auto | smooth ];
+  scroll-behaviour: [ auto | smooth ];
 }
 ```
 
 - `auto`: Abrupt jump between elements within the scrolling box
-- `smooth`: Smooth animated transition 
+- `smooth`: Smooth animated transition
 
 ```html
 <nav>
@@ -58,11 +58,13 @@ section {
 window.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
 ---
+
 Resources:
-- https://css-tricks.com/almanac/properties/s/scroll-behavior/  
+
+- https://css-tricks.com/almanac/properties/s/scroll-behavior/
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo

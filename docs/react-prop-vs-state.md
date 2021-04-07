@@ -2,6 +2,7 @@
 id: react-prop-vs-state
 title: Prop vs State
 ---
+
 ## What are Props?
 
 - Props stand for properties
@@ -11,35 +12,39 @@ title: Prop vs State
 ### How to pass data with Props?
 
 Here is an example of how data can be passed by using Props:
+
 ```javascript
-class ParentComponent extends Component {    
-    render() {    
-        return (        
-            <ChildComponent name="First Child" />    
-        );  
-    }
+class ParentComponent extends Component {
+  render() {
+    return <ChildComponent name="First Child" />;
+  }
 }
 
-const ChildComponent = (props) => {    
-    return <p>{props.name}</p>; 
+const ChildComponent = (props) => {
+  return <p>{props.name}</p>;
 };
 ```
+
 Firstly, we need to define/get some data from the parent component and assign it to a child component’s “prop” attribute.
 
 ```js
 <ChildComponent name="First Child" />
 ```
+
 “Name” is a defined prop here and contains text data. Then we can pass data with Props like we’re giving an argument to a function:
+
 ```js
-const ChildComponent = (props) => {  
-    // statements
+const ChildComponent = (props) => {
+  // statements
 };
 ```
 
 And finally, we use dot notation to access the prop data and then render it:
+
 ```js
 return <p>{props.name}</p>;
 ```
+
 ## What is State?
 
 - Special built-in object called State
@@ -47,31 +52,33 @@ return <p>{props.name}</p>;
 - Unlike Props, components cannot pass data with State but they can create and manage it internally.
 
 Here is an example usage of State:
+
 ```js
-class Test extends React.Component {    
-    constructor() {    
-        this.state = {      
-            id: 1,      
-            name: "test"    
-        };  
-    }    
-    
-    render() {    
-        return (      
-            <div>        
-                <p>{this.state.id}</p>        
-                <p>{this.state.name}</p>      
-            </div>    
-        );  
-    }
+class Test extends React.Component {
+  constructor() {
+    this.state = {
+      id: 1,
+      name: "test",
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.id}</p>
+        <p>{this.state.name}</p>
+      </div>
+    );
+  }
 }
 ```
 
 State should not be modified directly but it should be modified with a special method called setState( ).
+
 ```js
 this.state.id = “2020”; // wrong
 
-this.setState({         // correct  
+this.setState({         // correct
     id: "2020"
 });
 ```

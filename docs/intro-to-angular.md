@@ -4,11 +4,13 @@ title: Introduction to Angular
 ---
 
 ### Benefits of Using Angular
+
 - Gives applications a clean structure
 - Re-usable code
 - Applications more testable
 
 ### Building Blocks of Angular **Components**
+
 - Data
 - HTML Template
 - Logic
@@ -17,25 +19,26 @@ title: Introduction to Angular
 
 1. Create a Component
 2. Register it in module
-3. Add an element in an HTML Markup 
+3. Add an element in an HTML Markup
 
 #### 1. Create a Component
+
 `courses.component.ts`
+
 ```ts
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-    selector: 'courses',
-    template: '<h2>Courses</h2>'
+  selector: "courses",
+  template: "<h2>Courses</h2>",
 })
-
-export class CoursesComponent {
-
-}
+export class CoursesComponent {}
 ```
 
 #### 2. Register it in module
+
 `app.module.ts`
+
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -57,7 +60,9 @@ export class AppModule { }
 ```
 
 #### 3. Add an element in an HTML Markup
+
 `app.component.html`
+
 ```ts
 <h1>Angular</h1>
 <courses></courses>

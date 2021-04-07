@@ -8,17 +8,21 @@ CSS Selectors cheatsheet
 ## Types
 
 ```css
-# Class
-.nav {...} 
+# Class .nav {
+  ...;
+}
 
-# ID
-#nav {...}
+# ID #nav {
+  ...;
+}
 
-# Nav element
-nav {...}
+# Nav element nav {
+  ...;
+}
 
-# Attribute
-a[nav]{...}
+# Attribute a[nav] {
+  ...;
+}
 ```
 
 ## Operator
@@ -26,6 +30,7 @@ a[nav]{...}
 ### Adjacent Sibling combinator
 
 Select all `<p>` elems placed right after `<div>` elems
+
 ```css
 div + p
 ```
@@ -41,6 +46,7 @@ ul ~ p
 ### name
 
 Selects all `<p>` elems inside `<div>` elems
+
 ```css
 div p
 ```

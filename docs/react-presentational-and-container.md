@@ -3,21 +3,23 @@ id: react-presentational-and-container
 title: Presentational and Container Components Pattern in React
 ---
 
-This is old React architecture pattern introduced before the use of Hook. 
+This is old React architecture pattern introduced before the use of Hook.
 
 Container Component (`.ts`)
+
 - Are concerned with how things work.
-- May contain both presentational and container components** inside but usually don’t have any DOM markup of their own except for some wrapping divs, and never have any styles.
+- May contain both presentational and container components\*\* inside but usually don’t have any DOM markup of their own except for some wrapping divs, and never have any styles.
 - Provide the data and behavior to presentational or other container components.
 - Call Flux actions and provide these as callbacks to the presentational components.
 - Are often stateful, as they tend to serve as data sources.
 - Are usually generated using higher order components such as connect() from React Redux, createContainer() from Relay, or Container.create() from Flux Utils, rather than written by hand.
 - Examples: UserPage, FollowersSidebar, StoryContainer, FollowedUserList.
-I put them in different folders to make this distinction clear.
+  I put them in different folders to make this distinction clear.
 
 Presentational components (`.tsx`)
+
 - Concerned with how things look.
-- May contain both presentational and container components** inside, and usually have some DOM markup and styles of their own.
+- May contain both presentational and container components\*\* inside, and usually have some DOM markup and styles of their own.
 - Often allow containment via this.props.children.
 - Have no dependencies on the rest of the app, such as Flux actions or stores.
 - Don’t specify how the data is loaded or mutated.

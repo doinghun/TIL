@@ -8,11 +8,12 @@ title: Making CLI app with Inquirer.js
 ## Example
 
 Inquirer.js
-```js
-const fs = require("fs")
-const inquirer = require("inquirer")
 
-const filename = "sidebars.js"
+```js
+const fs = require("fs");
+const inquirer = require("inquirer");
+
+const filename = "sidebars.js";
 
 const questions = [
   {
@@ -21,7 +22,7 @@ const questions = [
     message: "TIL Topic?",
     choices: ["React", "CSS", "JS", "TS"],
     filter: function (val) {
-      return val.toLowerCase()
+      return val.toLowerCase();
     },
   },
   {
@@ -29,24 +30,24 @@ const questions = [
     name: "title",
     message: "TIL Title?",
   },
-]
+];
 inquirer.prompt(questions).then((answers) => {
-  const { topic, title } = answers
-  const lowerTitle = title.toLowerCase().replace(/ /g, "-")
-  const newFile = `${topic}-${lowerTitle}.md`
+  const { topic, title } = answers;
+  const lowerTitle = title.toLowerCase().replace(/ /g, "-");
+  const newFile = `${topic}-${lowerTitle}.md`;
   fs.writeFile(
     `/${newFile}`,
     `---\nid: ${newFile}\ntitle: ${title}\n---`,
     (err) => {
-      if (err) return console.log(err)
-      console.log("File Successfully Created!")
+      if (err) return console.log(err);
+      console.log("File Successfully Created!");
     }
-  )
+  );
   fs.appendFile(filename, `"${newFile}"`, (err) => {
-    if (err) return console.log(err)
-    console.log("File Successfully Appended!")
-  })
-})
+    if (err) return console.log(err);
+    console.log("File Successfully Appended!");
+  });
+});
 ```
 
 Using built-in readline

@@ -7,12 +7,12 @@ title: Stacking Elements in CSS
 
 ```css
 .parent {
-    position: relative;
+  position: relative;
 }
 .child {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 ```
 
@@ -21,12 +21,12 @@ title: Stacking Elements in CSS
 
 ```css
 .parent {
-    position: relative;
+  position: relative;
 }
 .child {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 ```
 

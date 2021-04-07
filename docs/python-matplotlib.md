@@ -43,7 +43,9 @@ plt.show()
 ```
 
 ## Creating Multiplots on Same Canvas
+
 Functional
+
 ```py
 # plt.subplot(nrows, ncols, plot_number)
 plt.subplot(1,2,1)
@@ -52,6 +54,4 @@ plt.subplot(1,2,2)
 plt.plot(y, x, 'g*-')
 ```
 
-
 # Matplotlib Object Oriented Method
-

@@ -12,8 +12,9 @@ Both `em` and `rem` units are based on the `font-size` CSS property. The only di
 - `rem` units inherit their value from t he `font-size` of the **root** element (`html`)
   - Use `v*` (viewport) instead for change depending on `box size`
 
-*Note: In most browsers, the `font-size` of the root element is set to `16px` by default.*
+_Note: In most browsers, the `font-size` of the root element is set to `16px` by default._
 
 ### Reference
+
 - [What is the difference between em and rem units?](https://github.com/30-seconds/30-seconds-of-interviews/blob/master/questions/em-rem-difference.md)
 - [CSS units for font-size: px | em | rem](https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97)

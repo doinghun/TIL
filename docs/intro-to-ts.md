@@ -5,13 +5,14 @@ title: Introduction to TypeScript
 
 ## What is TypeScript?
 
-TypeScript = JavaScript + ***Type System***
+TypeScript = JavaScript + **_Type System_**
 
 TS Type System
- - Helps us catch errors *during development*
- - Uses 'type annotations' to analyze our code
- - Only active *during development*
- - Doesn't provide any performance optimization
+
+- Helps us catch errors _during development_
+- Uses 'type annotations' to analyze our code
+- Only active _during development_
+- Doesn't provide any performance optimization
 
 ![Types](/img/typescript-types.png)
 

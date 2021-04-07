@@ -13,9 +13,9 @@ Media query that returns the content when the device's **width** <= 100px
 
 ```css
 @media (max-width: 100px) {
-    p {
-        font-size: 20px;
-    }
+  p {
+    font-size: 20px;
+  }
 }
 ```
 
@@ -23,9 +23,9 @@ Media query that returns the content when the device's **height** >= 350px
 
 ```css
 @media (min-height: 350px) {
-    p {
-        font-size: 20px;
-    }
+  p {
+    font-size: 20px;
+  }
 }
 ```
 
@@ -33,8 +33,8 @@ Media query that returns the content when the device's **height** >= 350px
 
 ```css
 responsive-img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
@@ -44,8 +44,9 @@ responsive-img {
 - `vh` (viewport height): 3vh would be 3% of the viewport's height.
 - `vmin` (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
 - `vmax` (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+
 ```css
 body {
-    width: 30vw; // 30 % of viewport's width
+  width: 30vw; // 30 % of viewport's width
 }
 ```

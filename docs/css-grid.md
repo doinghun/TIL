@@ -6,11 +6,13 @@ title: CSS Grid 101
 ## Properties for the Parent (grid container)
 
 ### display
+
 ```css
 .container {
   display: grid | inline-grid;
 }
 ```
+
 - **grid** – generates a block-level grid
 - **inline-grid** – generates an inline-level grid
 
@@ -22,6 +24,7 @@ title: CSS Grid 101
   grid-template-rows: 25% 100px auto;
 }
 ```
+
 <img src="https://css-tricks.com/wp-content/uploads/2018/11/template-columns-rows-01.svg" width="400" />
 
 ```css
@@ -65,7 +68,7 @@ title: CSS Grid 101
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "main main . sidebar"
     "footer footer footer footer";
@@ -84,6 +87,7 @@ title: CSS Grid 101
   grid-area: footer;
 }
 ```
+
 <img src="https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg" width="400" />
 
 ## **Properties for the Children (grid item)**
@@ -102,17 +106,19 @@ title: CSS Grid 101
   grid-row: third-line / 4;
 }
 ```
+
 <img src="https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row.svg" width="400" />
 
 If no end line value is declared, the item will span 1 track by default.
 
 ### grid-area
 
-- If your grid doesn't have an areas template to reference, you can create an area on the fly 
+- If your grid doesn't have an areas template to reference, you can create an area on the fly
 
 ```css
 .item {
-  grid-area: <name> **|** <row-start> / <column-start> / <row-end> / <column-end>;
+  grid-area: <name> * * | * * <row-start> / <column-start> / <row-end> /
+    <column-end>;
 }
 
 // example
@@ -121,11 +127,12 @@ If no end line value is declared, the item will span 1 track by default.
   grid-area: 1 / col4-start / last-line / 6;
 }
 ```
+
 <img src="https://css-tricks.com/wp-content/uploads/2018/11/grid-area.svg" width="400" />
 
 ### justify-self
 
-- Aligns a grid item inside a cell along the inline (row) axis horizontally *(↔ align-self)*
+- Aligns a grid item inside a cell along the inline (row) axis horizontally _(↔ align-self)_
 
 ```css
 .item {
@@ -135,7 +142,7 @@ If no end line value is declared, the item will span 1 track by default.
 
 ### align-self
 
-- Aligns a grid item inside a cell along the block (column) axis vertically *(↔ justify-self)*
+- Aligns a grid item inside a cell along the block (column) axis vertically _(↔ justify-self)_
 
 ```css
 .item {
@@ -177,45 +184,47 @@ When the viewport width is `400px` or more, make the header area occupy the top 
 
 ```css
 .container {
-    font-size: 1.5em;
-    min-height: 300px;
-    width: 100%;
-    background: LightGray;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 1fr auto;
-    grid-gap: 10px;
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header"
+    "advert"
+    "content"
+    "footer";
+}
+
+@media (min-width: 300px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      "header"
-      "advert"
-      "content"
-      "footer";
+      "advert header"
+      "advert content"
+      "advert footer";
   }
+}
 
-@media (min-width: 300px){
-    .container{
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "advert header"
-        "advert content"
-        "advert footer";
-    }
-  }
-
-  @media (min-width: 400px){
-    .container{
-      grid-template-areas:
+@media (min-width: 400px) {
+  .container {
+    grid-template-areas:
       /* Only change code below this line */
-        "header header"
-        "advert content"
-        "footer footer";
-      /* Only change code above this line */
-    }
+      "header header"
+      "advert content"
+      "footer footer";
+    /* Only change code above this line */
   }
+}
 ```
 
 ---
+
 ## Reference
+
 - https://css-tricks.com/snippets/css/complete-guide-grid/
 - https://www.freecodecamp.org/learn/responsive-web-design/css-grid/
