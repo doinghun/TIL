@@ -35,7 +35,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/js-wth-is-es")}
+              to={useBaseUrl("js-wth-is-es")}
             >
               Look Around
             </Link>

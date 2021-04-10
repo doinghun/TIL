@@ -47,6 +47,11 @@ console.log(addThree(1)); // 4
 console.log(addFour(1)); // 5
 ```
 
+## Why is Closure important?
+
+- To give objects data privacy
+  - eg) 
+
 _Reference:_
 
 - https://www.youtube.com/watch?v=71AtaJpJHw0&ab_channel=techsith
