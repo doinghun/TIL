@@ -1,5 +1,5 @@
 ---
-slug: 'devops-docker-compose' 
+slug: "devops-docker-compose"
 title: Using Docker Compose
 ---
 

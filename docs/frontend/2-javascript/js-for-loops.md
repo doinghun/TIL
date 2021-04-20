@@ -1,5 +1,5 @@
 ---
-slug: 'js-for-loops' 
+slug: "js-for-loops"
 title: for...of vs for...in Loops
 ---
 

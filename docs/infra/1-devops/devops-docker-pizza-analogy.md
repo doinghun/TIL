@@ -1,5 +1,5 @@
 ---
-slug: 'devops-docker-pizza-analogy' 
+slug: "devops-docker-pizza-analogy"
 title: Docker explained in Pizza Baking Analogy
 ---
 

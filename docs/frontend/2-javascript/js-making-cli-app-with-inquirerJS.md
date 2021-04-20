@@ -1,5 +1,5 @@
 ---
-slug: 'js-making-cli-app-with-inquirerJS' 
+slug: "js-making-cli-app-with-inquirerJS"
 title: Making CLI app with Inquirer.js
 ---
 

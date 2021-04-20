@@ -1,5 +1,5 @@
 ---
-slug: 'python-pandas-intro'
+slug: "python-pandas-intro"
 title: Intro to Python Pandas
 ---
 

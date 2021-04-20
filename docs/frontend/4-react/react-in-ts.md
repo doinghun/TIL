@@ -1,5 +1,5 @@
 ---
-slug: 'react-in-ts' 
+slug: "react-in-ts"
 title: React in TypeScript
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'react-lifecycle' 
+slug: "react-lifecycle"
 title: React Lifecycle
 ---
 

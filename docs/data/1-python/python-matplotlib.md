@@ -1,5 +1,5 @@
 ---
-slug: 'python-matplotlib'
+slug: "python-matplotlib"
 title: Intro to Matplotlib
 ---
 

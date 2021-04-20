@@ -1,5 +1,5 @@
 ---
-slug: 'react-routing' 
+slug: "react-routing"
 title: Routing in React
 ---
 

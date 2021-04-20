@@ -1,5 +1,5 @@
 ---
-slug: 'js-cb-promise-asaw' 
+slug: "js-cb-promise-asaw"
 title: Callbacks, Promises & Async Await
 ---
 

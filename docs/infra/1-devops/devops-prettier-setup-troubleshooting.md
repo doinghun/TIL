@@ -1,5 +1,5 @@
 ---
-slug: 'devops-prettier-setup-troubleshooting' 
+slug: "devops-prettier-setup-troubleshooting"
 title: Prettier Setup Troubleshooting
 ---
 

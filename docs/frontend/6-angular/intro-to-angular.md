@@ -1,5 +1,5 @@
 ---
-slug: 'intro-to-angular' 
+slug: "intro-to-angular"
 title: Introduction to Angular
 ---
 

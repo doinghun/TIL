@@ -1,5 +1,5 @@
 ---
-slug: 'css-centering'
+slug: "css-centering"
 title: How to center things with style on CSS
 ---
 

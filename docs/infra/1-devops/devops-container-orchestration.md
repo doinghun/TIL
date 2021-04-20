@@ -1,5 +1,5 @@
 ---
-slug: 'devops-container-orchestration' 
+slug: "devops-container-orchestration"
 title: Container Orchestration Techniques
 ---
 

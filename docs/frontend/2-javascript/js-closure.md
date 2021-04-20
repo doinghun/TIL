@@ -1,5 +1,5 @@
 ---
-slug: 'js-closure' 
+slug: "js-closure"
 title: Closure in JavaScript
 ---
 
@@ -50,7 +50,7 @@ console.log(addFour(1)); // 5
 ## Why is Closure important?
 
 - To give objects data privacy
-  - eg) 
+  - eg)
 
 _Reference:_
 

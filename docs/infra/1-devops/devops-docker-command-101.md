@@ -1,5 +1,5 @@
 ---
-slug: 'devops-docker-command-101' 
+slug: "devops-docker-command-101"
 title: Docker Command 101
 ---
 

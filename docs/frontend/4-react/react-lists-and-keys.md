@@ -1,5 +1,5 @@
 ---
-slug: 'react-lists-and-keys' 
+slug: "react-lists-and-keys"
 title: Lists and Keys in React
 ---
 

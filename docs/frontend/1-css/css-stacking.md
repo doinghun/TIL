@@ -1,5 +1,5 @@
 ---
-slug: 'css-stacking'
+slug: "css-stacking"
 title: Stacking Elements in CSS
 ---
 

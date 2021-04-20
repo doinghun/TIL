@@ -1,5 +1,5 @@
 ---
-slug: 'react-make-dropdown' 
+slug: "react-make-dropdown"
 title: Creating Dropdown in React
 ---
 

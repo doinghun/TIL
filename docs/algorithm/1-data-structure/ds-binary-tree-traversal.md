@@ -1,5 +1,5 @@
 ---
-slug: 'ds-binary-tree-traversal'
+slug: "ds-binary-tree-traversal"
 title: Binary Tree Traversal
 ---
 

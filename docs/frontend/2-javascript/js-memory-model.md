@@ -1,5 +1,5 @@
 ---
-slug: 'js-memory-model' 
+slug: "js-memory-model"
 title: JS Memory Model
 ---
 

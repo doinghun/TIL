@@ -1,5 +1,5 @@
 ---
-slug: 'python-anaconda'
+slug: "python-anaconda"
 title: What is Anaconda
 ---
 

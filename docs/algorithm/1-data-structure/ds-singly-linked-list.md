@@ -1,5 +1,5 @@
 ---
-slug: 'ds-singly-linked-list'
+slug: "ds-singly-linked-list"
 title: Singly Linked List
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'react-presentational-and-container' 
+slug: "react-presentational-and-container"
 title: Presentational and Container Components Pattern in React
 ---
 

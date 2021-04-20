@@ -1,5 +1,5 @@
 ---
-slug: 'react-testing' 
+slug: "react-testing"
 title: Testing in React
 ---
 

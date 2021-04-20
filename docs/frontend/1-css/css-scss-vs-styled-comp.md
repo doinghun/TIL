@@ -1,5 +1,5 @@
 ---
-slug: 'css-scss-vs-styled-comp' 
+slug: "css-scss-vs-styled-comp"
 title: SCSS vs Styled Components
 ---
 

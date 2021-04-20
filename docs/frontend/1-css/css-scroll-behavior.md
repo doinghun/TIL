@@ -1,5 +1,5 @@
 ---
-slug: 'css-scroll-behavior' 
+slug: "css-scroll-behavior"
 title: CSS Scroll Behavior
 ---
 

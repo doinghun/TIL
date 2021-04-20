@@ -1,5 +1,5 @@
 ---
-slug: 'css-specificity' 
+slug: "css-specificity"
 title: How CSS Specificity Works
 ---
 

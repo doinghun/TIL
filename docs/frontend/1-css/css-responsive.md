@@ -1,5 +1,5 @@
 ---
-slug: 'css-responsive' 
+slug: "css-responsive"
 title: CSS Reponsive Web Design Princicples
 ---
 

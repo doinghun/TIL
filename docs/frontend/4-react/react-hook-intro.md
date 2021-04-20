@@ -1,5 +1,5 @@
 ---
-slug: 'react-hook-intro' 
+slug: "react-hook-intro"
 title: Introduction to React Hook
 ---
 

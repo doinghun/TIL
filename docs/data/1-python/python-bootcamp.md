@@ -1,5 +1,5 @@
 ---
-slug: 'python-bootcamp'
+slug: "python-bootcamp"
 title: Python Bootcamp
 ---
 

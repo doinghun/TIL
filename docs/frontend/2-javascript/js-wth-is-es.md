@@ -1,5 +1,5 @@
 ---
-slug: 'js-wth-is-es' 
+slug: "js-wth-is-es"
 title: What is 'ES' in JavaScript?
 ---
 

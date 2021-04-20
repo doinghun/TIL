@@ -1,5 +1,5 @@
 ---
-slug: 'js-let-vs-var' 
+slug: "js-let-vs-var"
 title: let vs var in JavaScript
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'react-redux-analogy' 
+slug: "react-redux-analogy"
 title: React Redux explained in Analogy
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'css-flexbox'
+slug: "css-flexbox"
 title: CSS Flexbox 101
 ---
 

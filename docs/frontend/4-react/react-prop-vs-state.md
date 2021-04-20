@@ -1,5 +1,5 @@
 ---
-slug: 'react-prop-vs-state' 
+slug: "react-prop-vs-state"
 title: Prop vs State
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'js-oop-2' 
+slug: "js-oop-2"
 title: OOP in JS [Part 2]
 ---
 

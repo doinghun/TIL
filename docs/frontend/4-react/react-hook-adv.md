@@ -1,5 +1,5 @@
 ---
-slug: 'react-hook-adv' 
+slug: "react-hook-adv"
 title: Advanced React Hook (ft. useMemo & useCallback)
 ---
 

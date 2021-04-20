@@ -1,5 +1,5 @@
 ---
-slug: 'devops-dockerise-react' 
+slug: "devops-dockerise-react"
 title: How to dockerise React App
 ---
 

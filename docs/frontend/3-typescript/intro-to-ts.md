@@ -1,5 +1,5 @@
 ---
-slug: 'intro-to-ts' 
+slug: "intro-to-ts"
 title: Introduction to TypeScript
 ---
 

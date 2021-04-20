@@ -1,5 +1,5 @@
 ---
-slug: 'python-pandas-methods'
+slug: "python-pandas-methods"
 title: Useful Methods in Pandas
 ---
 

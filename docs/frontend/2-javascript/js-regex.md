@@ -1,5 +1,5 @@
 ---
-slug: 'js-regex'
+slug: "js-regex"
 title: Regex
 ---
 

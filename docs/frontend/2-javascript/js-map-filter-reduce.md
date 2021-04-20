@@ -1,5 +1,5 @@
 ---
-slug: 'js-map-filter-reduce' 
+slug: "js-map-filter-reduce"
 title: Map, Filter & Reduce in JS
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: 'react-make-cytoscape'
+slug: "react-make-cytoscape"
 title: Creating Cytoscape in React
 ---
 

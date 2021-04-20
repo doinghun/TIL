@@ -1,5 +1,5 @@
 ---
-slug: 'python-numpy'
+slug: "python-numpy"
 title: Numpy in Python
 ---
 

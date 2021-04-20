@@ -1,5 +1,5 @@
 ---
-slug: 'css-selector-101' 
+slug: "css-selector-101"
 title: Selectors 101
 ---
 

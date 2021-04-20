@@ -1,5 +1,5 @@
 ---
-slug: 'css-grid' 
+slug: "css-grid"
 title: CSS Grid 101
 ---
 
