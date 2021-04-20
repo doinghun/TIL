@@ -12,13 +12,43 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Notion2Github Cloud
+      - name: Notion2Github Frontend
         uses: younho9/notion2github@main
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./docs/cloud
+          docs-directory: ./docs/frontend
           filter-prop: Main Category
-          filter-value: Cloud
+          filter-value: Frontend
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Infra
+        uses: younho9/notion2github@main
+        with:
+          database-url: ${{ secrets.DATABASE_URL }}
+          docs-directory: ./docs/infra
+          filter-prop: Main Category
+          filter-value: Infra
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Algorithm
+        uses: younho9/notion2github@main
+        with:
+          database-url: ${{ secrets.DATABASE_URL }}
+          docs-directory: ./docs/algorithm
+          filter-prop: Main Category
+          filter-value: Algorithm
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Data
+        uses: younho9/notion2github@main
+        with:
+          database-url: ${{ secrets.DATABASE_URL }}
+          docs-directory: ./docs/data
+          filter-prop: Main Category
+          filter-value: Data
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 

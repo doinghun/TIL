@@ -1,11 +1,24 @@
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
+const { appendPath, getFirstContent } = require('./src/utils');
+const { CATEGORY_SLUGS } = require('./src/utils/constants');
+
+const docNavs = Object.entries(CATEGORY_SLUGS).map(
+  ([category, categorySlug]) => ({
+    to: getFirstContent(category),
+    activeBasePath: appendPath('docs', category),
+    label: categorySlug,
+  })
+);
+
+const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
+
 module.exports = {
   title: 'Today Dohun Learned',
   tagline: 'Public Archive of Everything I Learned',
-  url: 'https://doinghun.github.io',
-  baseUrl: '/TIL/',
+  url: 'https://doinghun.github.io/TIL',
+  baseUrl: '/',
   favicon: 'img/TIL.png',
   organizationName: 'doinghun', // Usually your GitHub org/user name.
   projectName: 'TIL', // Usually your repo name.
@@ -19,7 +32,7 @@ module.exports = {
         {
           label: 'Docs',
           position: 'left',
-          items: [{ label: 'Dev', to: 'js-wth-is-es' }],
+          items: [...docNavs],
         },
         {
           href: 'https://dohun.xyz/about',
@@ -43,22 +56,8 @@ module.exports = {
       links: [
         {
           title: 'Docs',
-          items: [
-            {
-              label: 'JavaScript',
-              to: '/js-wth-is-es',
-            },
-            {
-              label: 'React',
-              to: '/react-prop-vs-state',
-            },
-            {
-              label: 'CSS',
-              to: '/css-em-vs-rem',
-            },
-          ],
+          items: [...docFooters],
         },
-
         {
           title: 'Social',
           items: [
@@ -82,9 +81,9 @@ module.exports = {
     googleAnalytics: {
       trackingID: 'UA-149595338-1',
     },
-    algoria: {
-      apiKey: '78ec1b932bdfcb2c2d529092219a2e78',
-      indexName: 'dohun-til',
+    algolia: {
+      apiKey: 'b9cc66726951000cf12231b88155cd4c',
+      indexName: 'dohun',
     },
   },
   presets: [
@@ -92,7 +91,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/doinghun/TIL/edit/master/website/',
           showLastUpdateTime: true,
