@@ -74,8 +74,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build
-      - run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_USER }}
+      - run: |
+          npm install
+          npm run build
+          npm run deploy
