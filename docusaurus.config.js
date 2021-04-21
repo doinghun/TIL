@@ -19,6 +19,7 @@ module.exports = {
   tagline: 'Public Archive of Everything I Learned',
   url: 'https://doinghun.github.io/TIL',
   baseUrl: '/TIL/',
+  onBrokenLinks: 'ignore',
   favicon: 'img/TIL.png',
   organizationName: 'doinghun', // Usually your GitHub org/user name.
   projectName: 'TIL', // Usually your repo name.
