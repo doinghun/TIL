@@ -8,6 +8,10 @@ on:
 jobs:
   auto-sync-from-notion-to-github:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -59,3 +63,19 @@ jobs:
           commit_message: 'docs: Update docs (auto)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Format documents
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write ./docs/**/*.md
+          commit_message: 'docs: Update docs (auto)'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to GH pages
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_USER }}
