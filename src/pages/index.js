@@ -19,7 +19,7 @@ const iframe =
   '<iframe src="https://dohun.xyz/TIL-cytoscape/" width="500" height="500" style="border-style: none;  box-shadow: 0px 0px 15px 0px #888888"></iframe>';
 
 const RedirectHome = () => {
-  return <Redirect to="/docs" />;
+  return <Redirect to="/TIL/docs" />;
 };
 
 function Home() {

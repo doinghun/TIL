@@ -1,7 +1,7 @@
 const CATEGORY_SLUGS = {
   frontend: 'FrontEnd',
   algorithm: 'Data Structure & Algorithm',
-  infra: 'IT Infrastructure',
+  infra: 'Cloud & DevOps',
   data: 'Data',
 };
 

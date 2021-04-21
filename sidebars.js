@@ -1,5 +1,5 @@
 const { getFilesOf, getDirectoriesOf, removePriority } = require('./src/utils');
-const { SUB_CATEGORY_SLUGS } = require('./src/utils/constants');
+const { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS } = require('./src/utils/constants');
 
 const categories = getDirectoriesOf('docs');
 const getSubCategories = (category) => getDirectoriesOf(`docs/${category}`);
