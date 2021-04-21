@@ -1,6 +1,6 @@
 ---
 slug: "api-security"
-name: "API Security"
+title: "API Security"
 main_category: Infra
 category: 1. DevOps
 status: ✅ Completed
