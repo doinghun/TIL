@@ -3,7 +3,7 @@
     "recursiveExport": true,
     "createPageDirectory": false,
     "addMetadata": true,
-    "appendCreatedTime": true,
+    "appendCreatedTime": false,
     "generateSlug": true
   },
   "databaseConfig": {
