@@ -1,7 +1,9 @@
 const CATEGORY_SLUGS = {
+  internet: 'Internet',
+  cs: 'Computer Science',
   frontend: 'FrontEnd',
-  algorithm: 'Data Structure & Algorithm',
-  infra: 'Cloud & DevOps',
+  backend: 'Backend',
+  devops: 'DevOps',
   data: 'Data',
 };
 
@@ -13,9 +15,11 @@ const SUB_CATEGORY_SLUGS = {
   react: 'React',
   'react-native': 'React Native',
   angular: 'Angular',
-  'data-structure': 'Data Structure',
+  infra: 'Infra',
+ 'data-structure': 'Data Structure',
+  algorithm: 'Algorithms',
   python: 'Python',
-  devops: 'DevOps',
+  'machine-learning': 'Machine Learning'
 };
 
 const DATE_PREFIX_LENGTH = 11;
