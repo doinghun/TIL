@@ -12,6 +12,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Notion2Github Internet
+        uses: younho9/notion2github@main
+        with:
+          database-url: ${{ secrets.DATABASE_URL }}
+          docs-directory: ./docs/internet
+          filter-prop: Main Category
+          filter-value: Internet
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Frontend
         uses: younho9/notion2github@main
@@ -22,24 +32,34 @@ jobs:
           filter-value: Frontend
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-
-      - name: Notion2Github Infra
+          
+      - name: Notion2Github Backend
         uses: younho9/notion2github@main
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./docs/infra
+          docs-directory: ./docs/backend
           filter-prop: Main Category
-          filter-value: Infra
+          filter-value: Backend
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
-      - name: Notion2Github Algorithm
+      - name: Notion2Github DevOps
         uses: younho9/notion2github@main
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./docs/algorithm
+          docs-directory: ./docs/devops
           filter-prop: Main Category
-          filter-value: Algorithm
+          filter-value: DevOps
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Computer Science
+        uses: younho9/notion2github@main
+        with:
+          database-url: ${{ secrets.DATABASE_URL }}
+          docs-directory: ./docs/cs
+          filter-prop: Main Category
+          filter-value: Computer Science
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
