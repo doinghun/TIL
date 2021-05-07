@@ -82,10 +82,10 @@ module.exports = {
     googleAnalytics: {
       trackingID: 'UA-149595338-1',
     },
-    algolia: {
-      apiKey: 'b9cc66726951000cf12231b88155cd4c',
-      indexName: 'dohun',
-    },
+    // algolia: {
+    //   apiKey: 'b9cc66726951000cf12231b88155cd4c',
+    //   indexName: 'dohun',
+    // },
   },
   presets: [
     [
