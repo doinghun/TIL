@@ -1,5 +1,5 @@
 ---
-slug: "what-is-jvm-jre-jdk?"
+slug: "what-is-jvm-jre-jdk"
 title: "What is JVM, JRE, JDK?"
 main_category: Backend
 category: 1. Java
