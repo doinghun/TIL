@@ -15,7 +15,7 @@ last_edited_time: 2021-09-08
 
 What is JVM, JRE, JDK?
 
-![what-is-jvm-jre-jdk?-image-0](./images/what-is-jvm-jre-jdk?-image-0.png)
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210218150010/JDK.png" width="400" />
 
 <br />
 
