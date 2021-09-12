@@ -2,6 +2,7 @@ const CATEGORY_SLUGS = {
   internet: 'Internet',
   cs: 'Computer Science',
   frontend: 'FrontEnd',
+  backend: 'BackEnd',
   devops: 'DevOps',
   data: 'Data',
 };
@@ -21,6 +22,7 @@ const SUB_CATEGORY_SLUGS = {
   'data-structure': 'Data Structure',
   algorithms: 'Algorithms',
   python: 'Python',
+  java: 'Java'
 };
 
 // database: 'Database',
