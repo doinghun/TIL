@@ -18,11 +18,12 @@ const SUB_CATEGORY_SLUGS = {
   react: 'React',
   'react-native': 'React Native',
   angular: 'Angular',
-  infra: 'Infra',
   'data-structure': 'Data Structure',
   algorithms: 'Algorithms',
   python: 'Python',
-  java: 'Java'
+  java: 'Java',
+  infra: 'Infra',
+  cloud: 'Cloud'
 };
 
 // database: 'Database',
