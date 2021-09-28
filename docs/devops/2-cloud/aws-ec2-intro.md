@@ -153,46 +153,49 @@ ssh -i EC2Tutorial.pem ec2-user@{PUBLIC_IP_ADDRESS}
 
 Cluster
 
- - Clusters instances into a low-latency group in a single Availability Zone
+- Clusters instances into a low-latency group in a single Availability Zone
 
- - Pros: Great network
+- Pros: Great network
 
- - Cons: If the rack fails, all instances fail at the same time
+- Cons: If the rack fails, all instances fail at the same time
 
- - Use case: Big Data job that needs to complete fast; Application that needs extremely low latency & high network throughput
+- Use case: Big Data job that needs to complete fast; Application that needs extremely low latency & high network throughput
 
 Spread
 
- - spreads instances across underlying hardware (max 7 instances per group per AZ) - critical applications
+- spreads instances across underlying hardware (max 7 instances per group per AZ) - critical applications
 
- - Pros: 
-   - Can span across AZ
-   - Reduced risk of simultaneous failure
-   - EC2 Instances on different physical hardware
+- Pros:
 
- - Cons: 
-   - Limited to 7 instances per AZ per placement group
+  - Can span across AZ
+  - Reduced risk of simultaneous failure
+  - EC2 Instances on different physical hardware
 
- - Use case: 
- -  Application that needs to maximize high availability
- -  Critical Applications where each instance must be isolated from failure from each other
+- Cons:
+
+  - Limited to 7 instances per AZ per placement group
+
+- Use case:
+- Application that needs to maximize high availability
+- Critical Applications where each instance must be isolated from failure from each other
 
 Partition
 
-  - spreads instances across many different partitions within AZ. Scales to 100s of EC2 instances per group
-  - Pros: 
-    - Up to 7 partitions per AZ
-    - Can span across multiple AZs in the same region
-    - Up to 100s of EC2 instances
-    - The instances in a partition do not share racks with the instances in the other partitions
-    - A partition failure can affect many EC2 but won't affect other partitions
-    - EC2 instances get access to the partition info as metadata
+- spreads instances across many different partitions within AZ. Scales to 100s of EC2 instances per group
+- Pros:
 
-  - Use case: 
-    - HDFS
-    - HBase
-    - Cassandra
-    - Kafka
+  - Up to 7 partitions per AZ
+  - Can span across multiple AZs in the same region
+  - Up to 100s of EC2 instances
+  - The instances in a partition do not share racks with the instances in the other partitions
+  - A partition failure can affect many EC2 but won't affect other partitions
+  - EC2 instances get access to the partition info as metadata
+
+- Use case:
+  - HDFS
+  - HBase
+  - Cassandra
+  - Kafka
 
    <br />
 
@@ -274,29 +277,29 @@ More control over IP
 
 EC2 Nitro
 
-  - Underlying platform for next gen EC2 instances
+- Underlying platform for next gen EC2 instances
 
-  - New virtualization technology
+- New virtualization technology
 
-  - Better performance
+- Better performance
 
-    - Better networking options enhanced networking)
+  - Better networking options enhanced networking)
 
-    - Higher speed EBS (64,000 EBS IOPS)
+  - Higher speed EBS (64,000 EBS IOPS)
 
-  - Better underlying security
+- Better underlying security
 
 vCPU
 
-  - Multiple threads can run on one CPU (multithreading)
+- Multiple threads can run on one CPU (multithreading)
 
-  - Each thread is represented as a vCPU
+- Each thread is represented as a vCPU
 
-  - Optimizing CPU options
+- Optimizing CPU options
 
-    - #. of CPU cores: ⬇️ CPU cores → ⬇️ licensing costs (If need high RAM)
+  - #. of CPU cores: ⬇️ CPU cores → ⬇️ licensing costs (If need high RAM)
 
-    - #. of threads per core: Disable multithreading (If need high Performance Computing workloads)
+  - #. of threads per core: Disable multithreading (If need high Performance Computing workloads)
 
 - Capacity Reservations
 
