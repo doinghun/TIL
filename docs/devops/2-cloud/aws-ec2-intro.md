@@ -41,27 +41,15 @@ last_edited_time: 2021-09-28
 
   - naming convention
 
-  - m5.2xlarge
-
-    - m: instance class
-
-    - 5: generation (version)
-
-    - 2xlarge: size within the instance class
+  - m5.2xlarge -> m: instance class; 5: generation (version); 2xlarge: size within the instance class
 
   - General Purpose
 
-  - Compute Optimized
+  - Compute Optimized -> Compute intensive tasks that require high performance processors
 
-    - Compute intensive tasks that require high performance processors
+  - Memory Optimized -> Fast perf for workloads that process large data sets in memoery
 
-  - Memory Optimized
-
-    - Fast perf for workloads that process large data sets in memoery
-
-  - Storage Optimized
-
-    - Great for storage-intensive tasks that require high sequential read & write access to large data sets on local storage
+  - Storage Optimized -> Great for storage-intensive tasks that require high sequential read & write access to large data sets on local storage
 
      <br />
 
@@ -157,65 +145,56 @@ ssh -i EC2Tutorial.pem ec2-user@{PUBLIC_IP_ADDRESS}
 
   - 5 Elastic IPs per account
 
-  - NOT RECOMMENDED
-
-    - Poor architectural decisions
-
-    - Instead use random public IP & register DNS name to it or use Load Balancer & don't use public IP
+  - NOT RECOMMENDED: Poor architectural decisions => Instead use random public IP & register DNS name to it or use Load Balancer & don't use public IP
 
      <br />
 
-Placement Groups
+### Placement Groups
 
-- Strategy
+Cluster
 
-  - Cluster
+ - Clusters instances into a low-latency group in a single Availability Zone
 
-    - Clusters instances into a low-latency group in a single Availability Zone
+ - Pros: Great network
 
-    - Pros: Great network
+ - Cons: If the rack fails, all instances fail at the same time
 
-    - Cons: If the rack fails, all instances fail at the same time
+ - Use case: Big Data job that needs to complete fast; Application that needs extremely low latency & high network throughput
 
-    - Use case:
+Spread
 
-      - Big Data job that needs to complete fast
+ - spreads instances across underlying hardware (max 7 instances per group per AZ) - critical applications
 
-      - Application that needs extremely low latency & high network throughput
+ - Pros: 
+   - Can span across AZ
+   - Reduced risk of simultaneous failure
+   - EC2 Instances on different physical hardware
 
-  - Spread
+ - Cons: 
+   - Limited to 7 instances per AZ per placement group
 
-    - spreads instances across underlying hardware (max 7 instances per group per AZ) - critical applications
+ - Use case: 
+ -  Application that needs to maximize high availability
+ -  Critical Applications where each instance must be isolated from failure from each other
 
-    - Pros: Can span across AZ; Reduced risk of simultaneous failure; EC2 Instances on different physical hardware
+Partition
 
-    - Cons: Limited to 7 instances per AZ per placement group
+  - spreads instances across many different partitions within AZ. Scales to 100s of EC2 instances per group
+  - Pros: 
+    - Up to 7 partitions per AZ
+    - Can span across multiple AZs in the same region
+    - Up to 100s of EC2 instances
+    - The instances in a partition do not share racks with the instances in the other partitions
+    - A partition failure can affect many EC2 but won't affect other partitions
+    - EC2 instances get access to the partition info as metadata
 
-    - Use case:
+  - Use case: 
+    - HDFS
+    - HBase
+    - Cassandra
+    - Kafka
 
-      - Application that needs to maximize high availability
-
-      - Critical Applications where each instance must be isolated from failure from each other
-
-  - Partition
-
-    - spreads instances across many different partitions within AZ. Scales to 100s of EC2 instances per group
-
-    - Pros:
-
-      - Up to 7 partitions per AZ; Can span across multiple AZs in the same region; Up to 100s of EC2 instances
-
-      - The instances in a partition do not share racks with the instances in the other partitions
-
-      - A partition failure can affect many EC2 but won't affect other partitions
-
-      - EC2 instances get access to the partition info as metadata
-
-    - Use case
-
-      - HDFS; HBase; Cassandra; Kafka
-
-       <br />
+   <br />
 
 #### Elastic Network Interfaces (ENI)
 
@@ -291,9 +270,9 @@ More control over IP
 
 <br />
 
-#### Advanced
+### Advanced
 
-- EC2 Nitro
+EC2 Nitro
 
   - Underlying platform for next gen EC2 instances
 
@@ -307,7 +286,7 @@ More control over IP
 
   - Better underlying security
 
-- vCPU
+vCPU
 
   - Multiple threads can run on one CPU (multithreading)
 
@@ -315,9 +294,9 @@ More control over IP
 
   - Optimizing CPU options
 
-    - # of CPU cores: ⬇️ CPU cores → ⬇️ licensing costs (If need high RAM)
+    - #. of CPU cores: ⬇️ CPU cores → ⬇️ licensing costs (If need high RAM)
 
-    - # of threads per core: Disable multithreading (If need high Performance Computing workloads)
+    - #. of threads per core: Disable multithreading (If need high Performance Computing workloads)
 
 - Capacity Reservations
 
