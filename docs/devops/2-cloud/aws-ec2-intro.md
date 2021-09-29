@@ -192,6 +192,7 @@ Partition
   - EC2 instances get access to the partition info as metadata
 
 - Use case:
+
   - HDFS
   - HBase
   - Cassandra
