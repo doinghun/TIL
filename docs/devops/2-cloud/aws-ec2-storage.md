@@ -185,8 +185,6 @@ To migrate an EBS volume across AZ
 
 Root EBS volumes of instances get terminated by default if the EC2 instance gets terminated
 
-![aws-ec2-storage-image-0](./images/aws-ec2-storage-image-0.png)
-
 <br />
 
 **EFS**
@@ -200,7 +198,5 @@ Root EBS volumes of instances get terminated by default if the EC2 instance gets
 - EFS has a higher price point than EBS
 
 - Can leverage EFS-IA for cost savings
-
-![aws-ec2-storage-image-1](./images/aws-ec2-storage-image-1.png)
 
 <br />
