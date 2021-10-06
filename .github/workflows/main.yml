@@ -16,7 +16,7 @@ jobs:
       - name: Notion2Github Internet
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/internet
           filter-prop: Main Category
           filter-value: Internet
@@ -26,7 +26,7 @@ jobs:
       - name: Notion2Github Frontend
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/frontend
           filter-prop: Main Category
           filter-value: Frontend
@@ -36,7 +36,7 @@ jobs:
       - name: Notion2Github Backend
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/backend
           filter-prop: Main Category
           filter-value: Backend
@@ -46,7 +46,7 @@ jobs:
       - name: Notion2Github DevOps
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/devops
           filter-prop: Main Category
           filter-value: DevOps
@@ -56,7 +56,7 @@ jobs:
       - name: Notion2Github Computer Science
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/cs
           filter-prop: Main Category
           filter-value: Computer Science
@@ -66,7 +66,7 @@ jobs:
       - name: Notion2Github Data
         uses: younho9/notion2github@main
         with:
-          database-url: 'https://www.notion.so/cd078e18160842ff8309953e6fd039f9'
+          database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/data
           filter-prop: Main Category
           filter-value: Data
